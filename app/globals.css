@@ -408,8 +408,6 @@ body {
   z-index: 1100;
   max-height: 400px;
   overflow-y: auto;
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .region-dropdown.show {
@@ -1505,8 +1503,7 @@ body {
 @media (hover: none) and (pointer: coarse) {
   .combo-features {
     overscroll-behavior-y: contain;
-    /* Cho phép cả vuốt ngang (chuyển card) và vuốt dọc (cuộn mô tả) — trình duyệt tự nhận diện hướng */
-    touch-action: manipulation;
+    touch-action: pan-y !important;
   }
 }
 
@@ -1636,15 +1633,13 @@ body {
     font-size: 22px;
   }
 
-  /* Thanh cuộn rõ hơn trên mobile — dùng border phải làm scroll track + ép hiện scrollbar */
   .combo-features {
     overflow-y: scroll;
     padding-right: 10px;
     border-right: 3px solid #e2e8f0;
     border-radius: 0;
     position: relative;
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    touch-action: pan-y !important;
   }
 
   .combo-features::-webkit-scrollbar {
