@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fptlapmang.id.vn/sitemap.xml

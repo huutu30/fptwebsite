@@ -42,7 +42,7 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
   const scroll = (dir) => {
     const el = scrollRef.current;
     if (!el) return;
-    
+
     const card = el.querySelector('.combo-card');
     if (!card) return;
 
@@ -54,9 +54,9 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
     const gap = 20;
     const step = card.offsetWidth + gap;
     const distance = dir === 'left' ? -step : step;
-    
+
     const start = el.scrollLeft;
-    const duration = 500; 
+    const duration = 500;
     let startTime = null;
 
     el.style.scrollSnapType = 'none';
@@ -69,14 +69,14 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
-      
+
       const nextScrollLeft = start + distance * easeOutCubic(progress);
       el.scrollLeft = nextScrollLeft;
 
       if (timeElapsed < duration) {
         animationRef.current = requestAnimationFrame(animateScroll);
       } else {
-        el.scrollLeft = start + distance; 
+        el.scrollLeft = start + distance;
         el.style.scrollSnapType = '';
         animationRef.current = null;
       }
@@ -106,6 +106,7 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
         <div className="combo-sport-track" ref={scrollRef}>
           {data.map((item) => {
             const price = getProductPrice(item, activeCity, region);
+            const isPureCamera = item.id.startsWith('c2-') || item.id.startsWith('c3-') || item.id.startsWith('c5-') || item.id.startsWith('cam-');
 
             if (item.isBanner) {
               return (
@@ -137,8 +138,16 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
                   <h3 className="combo-card-name">{item.name}</h3>
                   <div className="combo-card-price">
                     <span className="combo-price-value">{(price || 0).toLocaleString('vi-VN')}đ</span>
-                    <span className="combo-price-unit">/tháng</span>
+                    {!isPureCamera && <span className="combo-price-unit">/tháng</span>}
                   </div>
+                  {(item.id.includes('vvip') || item.id === 'premium-fpt-play') && (
+                    <div className="combo-card-price-sub" style={{ fontSize: '12px', color: '#64748b', marginTop: '-4px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <span>(Đã bao gồm VAT)</span>
+                      <span style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center' }}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-info" style={{ color: '#94a3b8' }}><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                      </span>
+                    </div>
+                  )}
 
                   {/* SPEED BOX */}
                   {item.dl && item.ul && (

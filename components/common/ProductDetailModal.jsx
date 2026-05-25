@@ -34,6 +34,12 @@ export default function ProductDetailModal() {
   useEffect(() => {
     if (!selectedProduct) return;
 
+    const isPureCamera = selectedProduct.id.startsWith('c2-') || selectedProduct.id.startsWith('c3-') || selectedProduct.id.startsWith('c5-') || selectedProduct.id.startsWith('cam-');
+    if (isPureCamera) {
+      setHardwareImgs([]);
+      return;
+    }
+
     // ── Explicit devices list (preferred) ──────────────────────────────────────
     if (selectedProduct.devices && selectedProduct.devices.length > 0) {
       setHardwareImgs(selectedProduct.devices);
@@ -116,6 +122,8 @@ export default function ProductDetailModal() {
     openModal(selectedProduct.name, selectedProduct.id);
   };
 
+  const isPureCamera = selectedProduct.id.startsWith('c2-') || selectedProduct.id.startsWith('c3-') || selectedProduct.id.startsWith('c5-') || selectedProduct.id.startsWith('cam-');
+
   return (
     <div className="pd-modal-overlay" onClick={closeDetail}>
       <div className="pd-modal-content" onClick={e => e.stopPropagation()}>
@@ -135,7 +143,7 @@ export default function ProductDetailModal() {
             
             <div className="pd-price-row">
               <span className="pd-price">{(price || 0).toLocaleString('vi-VN')}đ</span>
-              <span className="pd-unit">/tháng</span>
+              {!isPureCamera && <span className="pd-unit">/tháng</span>}
             </div>
 
             {selectedProduct.dl && selectedProduct.ul && (
@@ -155,19 +163,21 @@ export default function ProductDetailModal() {
             )}
           </div>
 
-          <div className="pd-section">
-            <h4 className="pd-section-title">Nhận thêm trong gói này</h4>
-            <div className="pd-hardware-grid">
-              {hardwareImgs.map((img, idx) => (
-                <div key={idx} className="pd-hardware-item">
-                  <div className="pd-hardware-img-wrapper">
-                    <img src={img.src} alt={img.label} />
+          {hardwareImgs.length > 0 && (
+            <div className="pd-section">
+              <h4 className="pd-section-title">Nhận thêm trong gói này</h4>
+              <div className="pd-hardware-grid">
+                {hardwareImgs.map((img, idx) => (
+                  <div key={idx} className="pd-hardware-item">
+                    <div className="pd-hardware-img-wrapper">
+                      <img src={img.src} alt={img.label} />
+                    </div>
+                    <span>{img.label}</span>
                   </div>
-                  <span>{img.label}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="pd-section">
             <h4 className="pd-section-title">Thông tin chi tiết</h4>

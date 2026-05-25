@@ -74,6 +74,7 @@ export default function HomeClient() {
 
   return (
     <div className="home-page">
+      <h1 className="sr-only">Lắp mạng Internet cáp quang FPT – Truyền hình & Camera an ninh</h1>
       <Hero />
 
       <div className="container">
@@ -118,6 +119,7 @@ export default function HomeClient() {
           title="FPT Play – Gói xem truyền hình, giải trí, thể thao đa phương tiện"
           subtitle="Xem Ngoại hạng Anh, FA Cup, V.League và hàng ngàn nội dung giải trí hấp dẫn"
           data={PRODUCT_DATA.fpt_play_only}
+          customCardClass="fpt-play-card-special"
         />
 
         {/* SECTION 5: SPEEDX - WIFI 7 */}

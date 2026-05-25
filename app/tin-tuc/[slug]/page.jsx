@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${article.title} | FPT Telecom`,
     description: article.desc,
+    alternates: { canonical: `https://fptlapmang.id.vn/tin-tuc/${slug}` },
     openGraph: {
       title: article.title,
       description: article.desc,

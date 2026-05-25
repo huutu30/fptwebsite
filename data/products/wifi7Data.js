@@ -183,7 +183,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '01 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '01 Camera IQ4S' },
         { src: '/images/hardware/zplay.webp', label: 'Gói giải trí ZPlay' },
       ],
       alt: "Lắp đặt FPT SpeedX2 - IQ4S FPT giá rẻ",
@@ -209,7 +209,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '01 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '01 Camera IQ4S' },
         { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box + Gói FPT Play VIP' },
       ],
       alt: "Lắp đặt FPT SpeedX2 Pro - IQ4S FPT giá rẻ",
@@ -235,7 +235,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '02~05 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '02~05 Camera IQ4S' },
         { src: '/images/hardware/zplay.webp', label: 'Gói giải trí ZPlay' },
       ],
       alt: "Lắp đặt FPT SpeedX2 Eyes3 IQ4S FPT giá rẻ",
@@ -309,7 +309,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '01 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '01 Camera IQ4S' },
         { src: '/images/hardware/zplay.webp', label: 'Gói giải trí ZPlay' },
       ],
       alt: "Lắp đặt FPT SpeedX10 - IQ4S FPT giá rẻ",
@@ -335,7 +335,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '01 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '01 Camera IQ4S' },
         { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box + Gói FPT Play VIP' },
       ],
       alt: "Lắp đặt FPT SpeedX10 Pro - IQ4S FPT giá rẻ",
@@ -361,7 +361,7 @@ export const wifi7Data = {
       devices: [
         { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
         { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
-        { src: '/images/hardware/camera-iq4s.webp', label: '02~05 Camera IQ4S' },
+        { src: 'https://hi-static.fpt.vn/sys/shop/prod/2026-04-06/69d357565a422_IQ4S-01-09-01.jpg', label: '02~05 Camera IQ4S' },
         { src: '/images/hardware/zplay.webp', label: 'Gói giải trí ZPlay' },
       ],
       alt: "Lắp đặt FPT SpeedX10 Eyes3 IQ4S FPT giá rẻ",

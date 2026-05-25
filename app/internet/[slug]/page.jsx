@@ -31,6 +31,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `Đăng ký ${product.name} FPT - ${product.dl || ''} | Khuyến mãi ${currentMonth}`,
     description: `Gói cước ${product.name} FPT Telecom chỉ từ ${priceDisplay}đ/tháng. Tốc độ ${product.dl || 'cao'}${product.ul ? ` / ${product.ul}` : ''}. Đăng ký lắp đặt ngay!`,
+    alternates: { canonical: `https://fptlapmang.id.vn/internet/${slug}` },
     openGraph: {
       images: [{ url: product.image }],
     }

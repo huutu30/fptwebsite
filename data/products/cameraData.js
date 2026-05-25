@@ -20,7 +20,7 @@ export const cameraData = {
       id: "cam-iq4s",
       name: "Camera IQ 4S",
       type: "outdoor",
-      price: 400000,
+      price: 550000,
       image: "/images/69d47fca984ec_Camera_b4f4bde7.webp",
       features: [
         "Camera AI ngoài trời, chống nước IP67",
@@ -34,41 +34,13 @@ export const cameraData = {
       id: "cam-play4",
       name: "Camera Play 4",
       type: "indoor",
-      price: 400000,
+      price: 550000,
       image: "/images/69d47e1e2144f_Camera_15157d9b.webp",
       features: [
         "Camera AI trong nhà, xoay 360°",
         "Độ phân giải 2K+ siêu sắc nét",
         "Đàm thoại 2 chiều, theo dõi chuyển động",
         "Nhận diện khuôn mặt & phát hiện người",
-        "Lưu trữ Cloud tiêu chuẩn Tier III",
-      ],
-    },
-    {
-      id: "cam-play",
-      name: "Camera Play",
-      type: "indoor",
-      price: 350000,
-      image: "/images/69d47f711a01f_Camera_3e46a9f3.webp",
-      features: [
-        "Camera trong nhà, thiết kế nhỏ gọn",
-        "Độ phân giải Full HD 1080p",
-        "Đàm thoại 2 chiều",
-        "Hồng ngoại quay đêm",
-        "Lưu trữ Cloud tiêu chuẩn Tier III",
-      ],
-    },
-    {
-      id: "cam-play3",
-      name: "Camera Play 3",
-      type: "indoor",
-      price: 400000,
-      image: "/images/69d485fad7dd4_Camera_cb3b9e1a.webp",
-      features: [
-        "Camera trong nhà thế hệ mới",
-        "Độ phân giải 2K siêu nét",
-        "Đàm thoại 2 chiều, xoay 360°",
-        "Phát hiện chuyển động thông minh",
         "Lưu trữ Cloud tiêu chuẩn Tier III",
       ],
     },
@@ -110,7 +82,7 @@ export const cameraData = {
     {
       id: "c3-1t2n",
       name: "Combo 3 Camera (1 Trong - 2 Ngoài)",
-      price: 1299999,
+      price: 1650000,
       image: "/images/69d5cd9054d18_Combo__22c0d51c.webp",
       features: [
         "1 Play 4 (trong nhà) + 2 IQ4S (ngoài trời)",
@@ -121,7 +93,7 @@ export const cameraData = {
     {
       id: "c3-2t1n",
       name: "Combo 3 Camera (2 Trong - 1 Ngoài)",
-      price: 1299999,
+      price: 1650000,
       image: "/images/69d5cd9f40d3b_Combo__36adf355.webp",
       features: [
         "2 Play 4 (trong nhà) + 1 IQ4S (ngoài trời)",
@@ -132,7 +104,7 @@ export const cameraData = {
     {
       id: "c3-nt",
       name: "Combo 3 Camera Ngoài Trời",
-      price: 1299999,
+      price: 1650000,
       image: "/images/69d5cdb4cdb7e_Combo__4eddf185.webp",
       features: [
         "3 Camera IQ4S giám sát ngoài trời",
@@ -143,7 +115,7 @@ export const cameraData = {
     {
       id: "c3-tn",
       name: "Combo 3 Camera Trong Nhà",
-      price: 1299999,
+      price: 1650000,
       image: "/images/69d5cdab31530_Combo__947015aa.webp",
       features: [
         "3 Camera Play 4 giám sát trong nhà",
@@ -154,7 +126,7 @@ export const cameraData = {
     {
       id: "c5-2t3n",
       name: "Combo 5 Camera (2 Trong - 3 Ngoài)",
-      price: 2100000,
+      price: 2750000,
       image: "/images/69d47e3874820_Combo__559d27ea.webp",
       features: [
         "2 Play 4 (trong nhà) + 3 IQ4S (ngoài trời)",
@@ -171,7 +143,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 80,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 235000 },
       image: "/images/69d86fb618701_SkyEye_31eeb566.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play4",
@@ -185,7 +157,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 80,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 235000 },
       image: "/images/69d86f9719b39_SkyEye_f460fefa.webp",
       features: [
         "Modem Wi-Fi 6",
@@ -199,7 +171,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 45,
-      price: { "hcm": 275000, "tinh": 255000 },
+      price: { "hcm": 275000, "tinh": 275000 },
       image: "/images/69d86f7e8b81f_GigaEy_afa37315.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play 4",
@@ -213,7 +185,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 45,
-      price: { "hcm": 275000, "tinh": 255000 },
+      price: { "hcm": 275000, "tinh": 275000 },
       image: "/images/69d86f27cf644_GigaEy_0224c160.webp",
       features: [
         "Modem Wi-Fi 6 & Camera IQ4S",
@@ -226,7 +198,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 50,
-      price: { "hcm": 295000, "tinh": 275000 },
+      price: { "hcm": 295000, "tinh": 295000 },
       image: "/images/69d86f5f4ffb8_GigaEy_8708a83b.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play4",
@@ -240,7 +212,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 50,
-      price: { "hcm": 295000, "tinh": 275000 },
+      price: { "hcm": 295000, "tinh": 295000 },
       image: "/images/69d86efe4c83d_GigaEy_d1b599cc.webp",
       features: [
         "Modem Wi-Fi 6 & Camera IQ4S",
@@ -254,7 +226,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 82,
-      price: { "hcm": 295000, "tinh": 275000 },
+      price: { "hcm": 295000, "tinh": 245000 },
       image: "/images/69d870ca9fe85_SkyEye_1a6fcaae.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play4",
@@ -269,7 +241,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 82,
-      price: { "hcm": 295000, "tinh": 275000 },
+      price: { "hcm": 295000, "tinh": 245000 },
       image: "/images/69d8713e7f170_SkyEye_b5aedacb.webp",
       features: [
         "Modem Wi-Fi 6 & Camera IQ4S",
@@ -283,7 +255,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 48,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 220000 },
       image: "/images/69d8716905718_GigaEy_dda7d21e.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play 4",
@@ -298,7 +270,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 48,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 220000 },
       image: "/images/69d8718a43676_GigaEy_208e42eb.webp",
       features: [
         "Modem Wi-Fi 6 & Camera IQ4S",
@@ -312,7 +284,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 55,
-      price: { "hcm": 335000, "tinh": 315000 },
+      price: { "hcm": 335000, "tinh": 260000 },
       image: "/images/69d871cf23654_GigaEy_03d46955.webp",
       features: [
         "Modem Wi-Fi 6 & Camera Play4",
@@ -327,7 +299,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 55,
-      price: { "hcm": 335000, "tinh": 315000 },
+      price: { "hcm": 335000, "tinh": 260000 },
       image: "/images/69d871f1c09a1_GigaEy_1338a499.webp",
       features: [
         "Modem Wi-Fi 6 & Camera IQ4S",
@@ -342,7 +314,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 50,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 270000 },
       image: "/images/695c77644f57f_Triple_0aa06e57.webp",
       features: [
         "Modem Wi-Fi 6 & FPT Play Box",
@@ -356,7 +328,7 @@ export const cameraData = {
       dl: "300 Mbps",
       ul: "300 Mbps",
       speedPercent: 50,
-      price: { "hcm": 285000, "tinh": 265000 },
+      price: { "hcm": 285000, "tinh": 270000 },
       image: "/images/6915f991627c9_Triple_092b7bf3.webp",
       features: [
         "Modem Wi-Fi 6 & FPT Play Box",
@@ -370,7 +342,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 82,
-      price: { "hcm": 270000, "tinh": 250000 },
+      price: { "hcm": 270000, "tinh": 270000 },
       image: "/images/695c88546cf65_Triple_7352be09.webp",
       features: [
         "Modem Wi-Fi 6 & FPT Play Box",
@@ -384,7 +356,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 85,
-      price: { "hcm": 295000, "tinh": 275000 },
+      price: { "hcm": 295000, "tinh": 295000 },
       image: "/images/691e83525af0b_Triple_5a20eec7.webp",
       features: [
         "Modem Wi-Fi 6 & FPT Play Box",
@@ -469,7 +441,7 @@ export const cameraData = {
       dl: "2 Gbps",
       ul: "2 Gbps",
       speedPercent: 100,
-      price: { "hcm": 1049000, "tinh": 1049000 },
+      price: { "hcm": 1039000, "tinh": 1039000 },
       image: "/images/695cbbbf4a0d9_FPT_20_48ee97ee.webp",
       features: [
         "Wi-Fi 7 tăng khả năng tải gấp 4 lần",
@@ -487,7 +459,7 @@ export const cameraData = {
       dl: "10 Gbps",
       ul: "10 Gbps",
       speedPercent: 100,
-      price: { "hcm": 1639900, "tinh": 1639000 },
+      price: { "hcm": 1639000, "tinh": 1639000 },
       image: "/images/695cbbf2ecb01_FPT_20_288236f7.webp",
       features: [
         "Wi-Fi 7 tăng khả năng tải gấp 4 lần",
@@ -556,7 +528,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 80,
-      price: { "hcm": 305000, "tinh": 305000 },
+      price: { "hcm": 305000, "tinh": 230000 },
       image: "/images/69bcf2cc2715e_SkyEye_5e3c2179.webp",
       features: [
         "Áp dụng cho khu vực Tây Nam Bộ",
@@ -571,7 +543,7 @@ export const cameraData = {
       dl: "1 Gbps",
       ul: "300 Mbps",
       speedPercent: 80,
-      price: { "hcm": 305000, "tinh": 305000 },
+      price: { "hcm": 305000, "tinh": 230000 },
       image: "/images/69bcf0adbc239_SkyEye_d3200efe.webp",
       features: [
         "Áp dụng cho khu vực Tây Nam Bộ",

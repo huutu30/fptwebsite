@@ -44,11 +44,6 @@ export default function Footer() {
               <a href="#" className={`${styles.socialIcon} ${styles.zaloLogo}`} aria-label="Zalo">Zalo</a>
               <a href="#" className={`${styles.socialIcon} ${styles.fbIcon}`} aria-label="Facebook"><FacebookIcon size={22} /></a>
             </div>
-            
-            <a href="tel:19006600" className={styles.hotlineBlock}>
-              <Phone size={24} fill="currentColor" strokeWidth={0} />
-              1900 6600
-            </a>
           </div>
         </div>
 
@@ -108,25 +103,10 @@ export default function Footer() {
               <li><Link href="/internet/ca-nhan">Lắp đặt WiFi Internet</Link></li>
               <li><Link href="/giai-tri/fpt-play">Internet - Truyền hình FPT Play</Link></li>
               <li><Link href="/thiet-bi/camera">FPT Camera</Link></li>
-              <li><Link href="/thiet-bi/smarthome" className={styles.highlightLink}>FPT Smart Home</Link></li>
+              <li><Link href="/thiet-bi/smarthome">FPT Smart Home</Link></li>
             </ul>
           </div>
 
-          {/* Column 5: Lắp mạng tại */}
-          <div className={styles.footerCol}>
-            <h3>Lắp mạng FPT tại</h3>
-            <ul className={styles.footerLinks}>
-              <li><Link href="/lap-internet-wifi/hcm">TP. Hồ Chí Minh</Link></li>
-              <li><Link href="/lap-internet-wifi/ha-noi">Hà Nội</Link></li>
-              <li><Link href="/lap-internet-wifi/da-nang">Đà Nẵng</Link></li>
-              <li><Link href="/lap-internet-wifi/hai-phong">Hải Phòng</Link></li>
-              <li><Link href="/lap-internet-wifi/binh-duong">Bình Dương</Link></li>
-              <li><Link href="/lap-internet-wifi/dong-nai">Đồng Nai</Link></li>
-              <li><Link href="/lap-internet-wifi/khanh-hoa">Khánh Hòa</Link></li>
-              <li><Link href="/lap-internet-wifi/vung-tau">Vũng Tàu</Link></li>
-            </ul>
-          </div>
-          
         </div>
       </div>
     </footer>

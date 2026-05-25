@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 /* Inter Font — self-hosted, only vietnamese + latin subsets */
 /* vietnamese */
 @font-face {
@@ -93,24 +94,40 @@
 }
 
 /* GLOBAL RESET & MOBILE BULLETPROOFING — v2.0 2024-05-14 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
-  -webkit-text-size-adjust: 100%; /* Prevent iOS from zooming text */
+  -webkit-text-size-adjust: 100%;
+  /* Prevent iOS from zooming text */
 }
 
-img, video, iframe, svg {
+img,
+video,
+iframe,
+svg {
   max-width: 100%;
   height: auto;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, span, li {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -391,6 +408,8 @@ body {
   z-index: 1100;
   max-height: 400px;
   overflow-y: auto;
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .region-dropdown.show {
@@ -1624,6 +1643,8 @@ body {
     border-right: 3px solid #e2e8f0;
     border-radius: 0;
     position: relative;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
 
   .combo-features::-webkit-scrollbar {
@@ -2706,4 +2727,162 @@ body {
   border-radius: 50%;
   animation: spin 0.3s linear infinite;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FPT Play custom styles to match official design (smaller cards, blue buttons) */
+.fpt-play-card-special {
+  flex: 0 0 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 12px !important;
+}
+
+.fpt-play-card-special.banner-card {
+  flex: 0 0 286px !important;
+  min-width: 286px !important;
+  max-width: 286px !important;
+}
+
+.fpt-play-card-special.banner-card img {
+  border-radius: 12px !important;
+  object-fit: cover !important;
+}
+
+.fpt-play-card-special .combo-card-body {
+  padding: 16px !important;
+}
+
+.fpt-play-card-special .combo-card-name {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+  color: #1e293b !important;
+}
+
+.fpt-play-card-special .combo-card-price {
+  margin-bottom: 2px !important;
+}
+
+.fpt-play-card-special .combo-price-value {
+  font-size: 18px !important;
+  color: #1e3a8a !important; /* Rich deep blue/indigo for price */
+}
+
+.fpt-play-card-special .combo-price-unit {
+  font-size: 12px !important;
+  color: #64748b !important;
+}
+
+.fpt-play-card-special .combo-features {
+  margin: 12px 0 !important;
+  padding: 0 !important;
+  font-size: 12.5px !important;
+  gap: 8px !important;
+  max-height: 80px !important;
+  min-height: 80px !important;
+  overflow: hidden !important;
+}
+
+.fpt-play-card-special .combo-features li {
+  align-items: flex-start !important;
+}
+
+.fpt-play-card-special .combo-features li span {
+  font-size: 12.5px !important;
+  line-height: 1.3 !important;
+  color: #475569 !important;
+}
+
+.fpt-play-card-special .combo-btn-primary {
+  background: #3b82f6 !important; /* Solid blue button */
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.fpt-play-card-special .combo-btn-primary:hover {
+  background: #2563eb !important;
+}
+
+/* Also style Standalone section inside /giai-tri/fpt-play */
+.blueButtonVariant .combo-card {
+  flex: 0 0 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 12px !important;
+}
+
+.blueButtonVariant .combo-card.banner-card {
+  flex: 0 0 286px !important;
+  min-width: 286px !important;
+  max-width: 286px !important;
+}
+
+.blueButtonVariant .combo-card.banner-card img {
+  border-radius: 12px !important;
+  object-fit: cover !important;
+}
+
+.blueButtonVariant .combo-card-body {
+  padding: 16px !important;
+}
+
+.blueButtonVariant .combo-card-name {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+  color: #1e293b !important;
+}
+
+.blueButtonVariant .combo-card-price {
+  margin-bottom: 2px !important;
+}
+
+.blueButtonVariant .combo-price-value {
+  font-size: 18px !important;
+  color: #1e3a8a !important;
+}
+
+.blueButtonVariant .combo-price-unit {
+  font-size: 12px !important;
+  color: #64748b !important;
+}
+
+.blueButtonVariant .combo-features {
+  margin: 12px 0 !important;
+  padding: 0 !important;
+  font-size: 12.5px !important;
+  gap: 8px !important;
+  max-height: 80px !important;
+  min-height: 80px !important;
+  overflow: hidden !important;
+}
+
+.blueButtonVariant .combo-features li {
+  align-items: flex-start !important;
+}
+
+.blueButtonVariant .combo-features li span {
+  font-size: 12.5px !important;
+  line-height: 1.3 !important;
+  color: #475569 !important;
+}
+
+.blueButtonVariant .combo-btn-primary {
+  background: #3b82f6 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.blueButtonVariant .combo-btn-primary:hover {
+  background: #2563eb !important;
 }

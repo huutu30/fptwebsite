@@ -61,6 +61,13 @@ export default function PackageDetailClient({ slug }) {
   // Hardware extraction
   useEffect(() => {
     if (!product) return;
+
+    const isPureCamera = product.id.startsWith('c2-') || product.id.startsWith('c3-') || product.id.startsWith('c5-') || product.id.startsWith('cam-');
+    if (isPureCamera) {
+      setHardwareImgs([]);
+      return;
+    }
+
     if (product.devices && product.devices.length > 0) {
       setHardwareImgs(product.devices);
       return;
@@ -119,6 +126,8 @@ export default function PackageDetailClient({ slug }) {
     .filter(p => p._category.path === product._category.path && p._slug !== slug)
     .slice(0, 6);
 
+  const isPureCamera = product.id.startsWith('c2-') || product.id.startsWith('c3-') || product.id.startsWith('c5-') || product.id.startsWith('cam-');
+
   return (
     <div className={styles.packagePage}>
       {/* Breadcrumb */}
@@ -152,10 +161,10 @@ export default function PackageDetailClient({ slug }) {
                 <div className={styles.hardwareGrid}>
                   {hardwareImgs.map((img, idx) => (
                     <div key={idx} className={styles.hardwareItem}>
-                      <div className={styles.hardwareImgWrap}>
-                        <img src={img.src} alt={img.label} />
-                      </div>
-                      <span>{img.label}</span>
+                       <div className={styles.hardwareImgWrap}>
+                         <img src={img.src} alt={img.label} />
+                       </div>
+                       <span>{img.label}</span>
                     </div>
                   ))}
                 </div>
@@ -169,7 +178,7 @@ export default function PackageDetailClient({ slug }) {
 
             <div className={styles.priceBox}>
               <span className={styles.priceValue}>{priceDisplay}đ</span>
-              <span className={styles.priceUnit}>/tháng</span>
+              {!isPureCamera && <span className={styles.priceUnit}>/tháng</span>}
             </div>
 
             {/* Speed */}

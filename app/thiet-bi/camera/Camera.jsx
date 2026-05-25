@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useRegisterModal } from '@/context/RegisterContext';
 import { useRegion } from '@/context/RegionContext';
 import Link from 'next/link';
-import { Shield, Cloud, Eye, Cpu, Check, Sun, Moon, ChevronDown, ChevronUp } from 'lucide-react';
+import { Shield, Cloud, Eye, Cpu, Check, Sun, Moon, ChevronDown, ChevronUp, Gift } from 'lucide-react';
 import { PRODUCT_DATA } from '@/data/productData';
 import ProductCardSlider from '@/components/common/ProductCardSlider';
 import NewsSection from '@/components/home/NewsSection';
@@ -23,13 +23,15 @@ export default function Camera() {
 
   // Filter combo tabs
   const filteredCombos = comboTab === 'all'
-    ? cameraCombos
-    : cameraCombos.filter(c => {
-        if (comboTab === '2cam') return c.name.includes('2 Camera');
-        if (comboTab === '3cam') return c.name.includes('3 Camera');
-        if (comboTab === '5cam') return c.name.includes('5 Camera');
-        return true;
-      });
+    ? [...cameraProducts, ...cameraCombos]
+    : comboTab === '1cam'
+      ? cameraProducts
+      : cameraCombos.filter(c => {
+          if (comboTab === '2cam') return c.name.includes('2 Camera');
+          if (comboTab === '3cam') return c.name.includes('3 Camera');
+          if (comboTab === '5cam') return c.name.includes('5 Camera');
+          return true;
+        });
 
   return (
     <div className={styles.cameraPage}>
@@ -80,43 +82,63 @@ export default function Camera() {
         </div>
       </section>
 
-      {/* ===== DANH MỤC CAMERA LẺ ===== */}
-      <section className={styles.section}>
+      {/* ===== THÊM NHIỀU LỰA CHỌN COMBO CAMERA ===== */}
+      <section className={styles.promoSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Dòng sản phẩm <span>Camera AI</span></h2>
-            <p className={styles.sectionDesc}>
-              Camera AI FPT tích hợp nhận diện khuôn mặt, phát hiện người, đàm thoại 2 chiều và lưu trữ Cloud.
-            </p>
+            <h2 className={styles.sectionTitle}>Thêm nhiều lựa chọn <span>Combo Camera</span> cho gia đình bạn</h2>
           </div>
-          <div className={styles.productGrid}>
-            {cameraProducts.map((cam) => (
-              <div className={styles.productCard} key={cam.id}>
-                <div className={styles.productImgWrap}>
-                  <img
-                    src={cam.image}
-                    alt={`${cam.name} - Camera FPT Telecom`}
-                    loading="lazy"
-                    width="280"
-                    height="220"
-                  />
-                </div>
-                <div className={styles.productBody}>
-                  <h3 className={styles.productName}>{cam.name}</h3>
-                  <div className={styles.productPrice}>
-                    {cam.price.toLocaleString('vi-VN')}đ <small>/thiết bị</small>
-                  </div>
-                  <ul className={styles.productFeatures}>
-                    {cam.features.map((f, i) => (
-                      <li key={i}><Check size={14} /><span>{f}</span></li>
-                    ))}
-                  </ul>
-                  <button onClick={() => openModal(cam.name)} className={styles.productBtn}>
-                    Đăng ký tư vấn
-                  </button>
-                </div>
+          <div className={styles.promoGrid}>
+            
+            {/* Card 1: 3 camera trong nhà */}
+            <div className={styles.promoCard}>
+              <span className={styles.promoLabel}>COMBO</span>
+              <h3 className={styles.promoTitle}>3 camera trong nhà</h3>
+              <p className={styles.promoDesc}>Phù hợp căn hộ và nhà 1–2 tầng cần giám sát toàn bộ trong nhà</p>
+              <div className={styles.promoImgWrap}>
+                <img src="https://hi-static.fpt.vn/sys/shop/stag/2026-05-20/6a0d6d93d9ead_1779264915.png" alt="Combo 3 camera trong nhà" />
               </div>
-            ))}
+              <div className={styles.promoPrice}>999.999đ</div>
+              <div className={styles.promoTag}>
+                <span className={styles.promoTagText}><Gift size={12} /> Ưu đãi 1 TRIỆU 3 CAM</span>
+              </div>
+              <button onClick={() => openModal("Combo 3 camera trong nhà (999k)")} className={styles.promoBtn}>
+                Mua ngay
+              </button>
+            </div>
+
+            {/* Card 2: 3 camera ngoài trời */}
+            <div className={styles.promoCard}>
+              <span className={styles.promoLabel}>COMBO</span>
+              <h3 className={styles.promoTitle}>3 camera ngoài trời</h3>
+              <p className={styles.promoDesc}>Phù hợp nhà có nhiều mặt tiếp cận, biệt thự mini, cơ sở kinh doanh</p>
+              <div className={styles.promoImgWrap}>
+                <img src="https://hi-static.fpt.vn/sys/shop/stag/2026-05-20/6a0d6dfb79a81_1779265019.png" alt="Combo 3 camera ngoài trời" />
+              </div>
+              <div className={styles.promoPrice}>999.999đ</div>
+              <div className={styles.promoTag}>
+                <span className={styles.promoTagText}><Gift size={12} /> Ưu đãi 1 TRIỆU 3 CAM</span>
+              </div>
+              <button onClick={() => openModal("Combo 3 camera ngoài trời (999k)")} className={styles.promoBtn}>
+                Mua ngay
+              </button>
+            </div>
+
+            {/* Card 3: 2 trong - 1 ngoài */}
+            <div className={styles.promoCard}>
+              <span className={styles.promoLabel}>COMBO</span>
+              <h3 className={styles.promoTitle}>2 trong - 1 ngoài</h3>
+              <p className={styles.promoDesc}>Phù hợp căn hộ và nhà 1–2 tầng cần giám sát trong và ngoài nhà</p>
+              <div className={styles.promoImgWrap}>
+                <img src="https://hi-static.fpt.vn/sys/shop/stag/2026-05-20/6a0d6e0b81eef_1779265035.png" alt="Combo 2 trong - 1 ngoài" />
+              </div>
+              <div className={styles.promoPrice}>999.999đ</div>
+              <div style={{ height: '36px' }} />
+              <button onClick={() => openModal("Combo 2 trong - 1 ngoài (999k)")} className={styles.promoBtn}>
+                Mua ngay
+              </button>
+            </div>
+
           </div>
         </div>
       </section>
@@ -135,6 +157,7 @@ export default function Camera() {
           <div className={styles.tabGroup}>
             {[
               { key: 'all', label: 'Tất cả' },
+              { key: '1cam', label: '1 Camera' },
               { key: '2cam', label: '2 Camera' },
               { key: '3cam', label: '3 Camera' },
               { key: '5cam', label: '5 Camera' },
@@ -165,6 +188,7 @@ export default function Camera() {
                   <h3 className={styles.comboName}>{combo.name}</h3>
                   <div className={styles.comboPrice}>
                     {combo.price.toLocaleString('vi-VN')}đ
+                    {combo.id.startsWith('cam-') && <small style={{ fontSize: '13px', fontWeight: '500', color: '#94a3b8', marginLeft: '4px' }}>/thiết bị</small>}
                   </div>
                   <ul className={styles.comboFeatures}>
                     {(combo.features || []).map((f, i) => (
@@ -172,7 +196,7 @@ export default function Camera() {
                     ))}
                   </ul>
                   <button onClick={() => openModal(combo.name)} className={styles.comboBtn}>
-                    Đăng ký ngay
+                    {combo.id.startsWith('cam-') ? "Đăng ký tư vấn" : "Đăng ký ngay"}
                   </button>
                 </div>
               </div>
