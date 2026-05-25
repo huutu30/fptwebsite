@@ -79,15 +79,9 @@ export default function RegisterModal() {
 
           <form onSubmit={handleSubmit}>
             {productName && (
-              <div className={styles.inputGroup} style={{ marginBottom: '30px' }}>
-                <input 
-                  type="text" 
-                  className={styles.inputField} 
-                  readOnly 
-                  value={productName}
-                  style={{ color: '#004a9c', fontWeight: '700', backgroundColor: '#f8fafc', paddingLeft: '15px', borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                />
-                <label className={styles.inputLabel} style={{ top: '-20px', fontSize: '13px', color: '#f57020', fontWeight: '700' }}>Sản phẩm bạn đang chọn</label>
+              <div className={styles.selectedProductBadge}>
+                <span>Sản phẩm đang chọn:</span>
+                <strong>{productName}</strong>
               </div>
             )}
 

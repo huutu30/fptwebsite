@@ -55,32 +55,32 @@
 
 /* Form Side */
 .modalForm {
-  padding: 40px;
+  padding: 24px 30px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
 .formHeader {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .formTitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   color: #1a1a1a;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .formDesc {
-  font-size: 15px;
+  font-size: 14px;
   color: #666;
 }
 
 /* Floating Label Inputs */
 .inputGroup {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .inputField {
@@ -127,33 +127,32 @@
   flex: 1;
 }
 
-/* Glow Pills for Services */
 .serviceSection {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .serviceTitle {
   font-size: 14px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .serviceGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
 }
 
 .servicePill {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
+  gap: 6px;
+  padding: 8px 14px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #475569;
   cursor: pointer;
@@ -179,11 +178,10 @@
   justify-content: center;
 }
 
-/* Submit Button */
 .submitBtn {
-  margin-top: 35px;
+  margin-top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: 12px 16px;
   background: linear-gradient(135deg, #00408f 0%, #00224d 100%);
   color: white;
   border: none;
@@ -220,7 +218,7 @@
     overflow-y: auto;
   }
   .modalForm {
-    padding: 30px 20px;
+    padding: 20px 16px;
   }
   .inputRow {
     flex-direction: column;
@@ -230,4 +228,28 @@
     background: rgba(0,0,0,0.05);
     color: #333;
   }
+}
+
+/* Selected Product Badge styles */
+.selectedProductBadge {
+  background: #f8fafc;
+  border-left: 4px solid #f57020;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e2e8f0;
+  border-left-width: 4px;
+}
+.selectedProductBadge span {
+  color: #666;
+  font-weight: 500;
+}
+.selectedProductBadge strong {
+  color: #00408f;
+  font-weight: 700;
 }
