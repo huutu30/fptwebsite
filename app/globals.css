@@ -1499,11 +1499,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Chỉ chặn cuộn lan ra ngoài trên thiết bị cảm ứng (mobile), tránh bị "kẹt" scroll trên PC */
 @media (hover: none) and (pointer: coarse) {
   .combo-features {
-    overscroll-behavior-y: contain;
-    touch-action: pan-y !important;
+    overscroll-behavior-y: auto;
+    touch-action: auto !important;
   }
 }
 
@@ -1634,12 +1633,12 @@ body {
   }
 
   .combo-features {
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-right: 10px;
     border-right: 3px solid #e2e8f0;
     border-radius: 0;
     position: relative;
-    touch-action: pan-y !important;
+    touch-action: auto !important;
   }
 
   .combo-features::-webkit-scrollbar {
