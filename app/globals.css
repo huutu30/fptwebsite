@@ -1202,7 +1202,7 @@ body {
   align-items: stretch;
   /* Đảm bảo các card giãn bằng nhau */
   overflow-x: auto;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
   gap: 20px;
@@ -1231,6 +1231,7 @@ body {
   display: grid;
   grid-template-rows: max-content 1fr;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* TRÊN DESKTOP: Chỉ áp dụng hover khi có chuột chính xác */
