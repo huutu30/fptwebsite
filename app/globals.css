@@ -1502,7 +1502,7 @@ body {
 @media (hover: none) and (pointer: coarse) {
   .combo-features {
     overscroll-behavior-y: auto;
-    touch-action: auto !important;
+    touch-action: auto;
   }
 }
 
@@ -1638,7 +1638,7 @@ body {
     border-right: 3px solid #e2e8f0;
     border-radius: 0;
     position: relative;
-    touch-action: auto !important;
+    touch-action: auto;
   }
 
   .combo-features::-webkit-scrollbar {
