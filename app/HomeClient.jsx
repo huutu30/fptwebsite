@@ -92,7 +92,6 @@ export default function HomeClient() {
           title={`Gói cước cho ${categoryNames[activeCategory] || "bạn"}`}
           subtitle={categoryDescriptions[activeCategory]}
           data={tabDataMap[activeCategory]}
-          region={region}
         />
         
         {/* SECTION 1: COMBO THỂ THAO */}
@@ -104,7 +103,6 @@ export default function HomeClient() {
             'c-the-thao-meta', 'c-the-thao-meta-f1', 'c-the-thao-meta-f2',
             'c-the-thao-speedx2', 'c-the-thao-speedx2-pro'
           ].includes(item.id))}
-          region={region}
           badgeSub="Internet – Truyền hình – Ngoại hạng Anh"
         />
 
@@ -112,7 +110,6 @@ export default function HomeClient() {
         <ProductCardSlider
           title="Thiết bị công nghệ bán chạy nhất"
           data={PRODUCT_DATA.camera_combos}
-          region={region}
           customCardClass="camera-card-special"
         />
 
@@ -121,7 +118,6 @@ export default function HomeClient() {
           title="FPT Play – Gói xem truyền hình, giải trí, thể thao đa phương tiện"
           subtitle="Xem Ngoại hạng Anh, FA Cup, V.League và hàng ngàn nội dung giải trí hấp dẫn"
           data={PRODUCT_DATA.fpt_play_only}
-          region={region}
         />
 
         {/* SECTION 5: SPEEDX - WIFI 7 */}

@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { ChevronLeft, ChevronRight, Download, Upload, Check } from 'lucide-react';
 import { useRegisterModal } from '@/context/RegisterContext';
 import { useProductDetail } from '@/context/ProductDetailContext';
+import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 
 /**
  * ProductCardSlider - Card slider tái sử dụng cho mọi section
@@ -17,11 +19,12 @@ import { useProductDetail } from '@/context/ProductDetailContext';
  *  - badgeSub: dòng phụ trên banner overlay (optional, mặc định = tên gói)
  *  - customCardClass: class CSS bổ sung cho từng card
  */
-export default function ProductCardSlider({ title, subtitle, data, region, badgeSub, customCardClass }) {
+export default function ProductCardSlider({ title, subtitle, data, badgeSub, customCardClass }) {
   const scrollRef = useRef(null);
   const { openModal } = useRegisterModal();
   const { openDetail } = useProductDetail();
   const pathname = usePathname();
+  const { activeCity, region } = useRegion();
 
   const animationRef = useRef(null);
 
@@ -102,7 +105,7 @@ export default function ProductCardSlider({ title, subtitle, data, region, badge
 
         <div className="combo-sport-track" ref={scrollRef}>
           {data.map((item) => {
-            const price = typeof item.price === 'object' ? (item.price[region] || item.price['tinh']) : item.price;
+            const price = getProductPrice(item, activeCity, region);
 
             if (item.isBanner) {
               return (

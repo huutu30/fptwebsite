@@ -425,10 +425,80 @@ body {
   background: #fff7ed;
 }
 
+/* Custom HCM Nested Selection Styles */
+.region-group-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  gap: 6px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 6px;
+}
+
+.region-group-header:first-of-type {
+  border-top: none;
+  margin-top: 0;
+}
+
+.region-option-nested {
+  display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10px 16px 10px 32px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.region-option-nested::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-left: 2px solid #cbd5e1;
+  border-bottom: 2px solid #cbd5e1;
+  transform: translateY(-70%) rotate(-45deg);
+  transition: border-color 0.2s;
+}
+
+.region-option-nested:hover {
+  background: #f8fafc;
+  color: var(--fpt-orange);
+}
+
+.region-option-nested:hover::before {
+  border-color: var(--fpt-orange);
+}
+
+.region-option-nested.active {
+  color: var(--fpt-orange);
+  font-weight: 700;
+  background: #fff7ed;
+}
+
+.region-option-nested.active::before {
+  border-color: var(--fpt-orange);
+  width: 6px;
+  height: 6px;
+}
+
 .region-divider {
   height: 1px;
-  background: #e8ecf1;
-  margin: 6px 12px;
+  background: #e2e8f0;
+  margin: 6px 16px;
 }
 
 .region-label {

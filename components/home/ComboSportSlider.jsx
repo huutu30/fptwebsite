@@ -3,13 +3,16 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Download, Upload, Check } from 'lucide-react';
+import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 
 /**
  * ComboSportSlider - Section Combo Internet + Truyền hình + Ngoại Hạng Anh
  * Design lấy cảm hứng từ FPT.vn: banner gradient → tên → giá → speed box → features → 2 buttons
  */
-export default function ComboSportSlider({ data, region }) {
+export default function ComboSportSlider({ data }) {
   const scrollRef = useRef(null);
+  const { region, activeCity } = useRegion();
 
   const scroll = (dir) => {
     const el = scrollRef.current;
@@ -45,7 +48,7 @@ export default function ComboSportSlider({ data, region }) {
       {/* CARD TRACK */}
       <div className="combo-sport-track" ref={scrollRef}>
         {data.map((item) => {
-          const price = typeof item.price === 'object' ? (item.price[region] || item.price['tinh']) : item.price;
+          const price = getProductPrice(item, activeCity, region);
 
           return (
             <article className="combo-card" key={item.id}>

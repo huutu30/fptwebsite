@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gia goi cuoc FPT theo tinh/thanh</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;background:#f6f7f9;color:#1f2933}
+    header{background:#f37021;color:white;padding:24px 32px}
+    main{padding:24px 32px}
+    h1{margin:0}
+    .meta{color:#fff4ec;margin:8px 0 0}
+    .back{display:inline-block;color:white;margin-bottom:12px;text-decoration:none;font-weight:700}
+    .toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+    .summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .summary span{background:white;border:1px solid #e7ebef;border-radius:6px;padding:8px 10px}
+    select,input{border:1px solid #ccd2da;border-radius:6px;padding:10px;background:white}
+    table{width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden}
+    th,td{padding:12px;border-bottom:1px solid #e7ebef;text-align:left;vertical-align:top}
+    th{background:#eef2f6;font-size:13px;text-transform:uppercase}
+    .price{font-weight:700;color:#e65100;white-space:nowrap}
+    a{color:#0b63ce;text-decoration:none}
+    .count{font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gia goi cuoc FPT theo tinh/thanh</h1>
+    <p class="meta">34 tinh/thanh | 5696 dong gia</p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <label>Tim tinh <input id="search" type="search" placeholder="Ha Noi, Da Nang..."></label>
+      <span class="count" id="count"></span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tinh/thanh</th>
+          <th>So dong</th>
+          <th>Nhom page</th>
+        </tr>
+      </thead>
+      <tbody>
+
+    <tr>
+      <td><a href="ho-chi-minh.html">Hồ Chí Minh</a></td>
+      <td class="price">156</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 37<br>Internet gia dinh: 25<br>Internet game thu: 11<br>Internet doanh nghiep: 10<br>FPT Play: 30<br>FPT Camera: 7</td>
+    </tr>
+    <tr>
+      <td><a href="ha-noi.html">Hà Nội</a></td>
+      <td class="price">165</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 38<br>Internet gia dinh: 30<br>Internet game thu: 12<br>Internet doanh nghiep: 10<br>FPT Play: 29<br>FPT Camera: 10</td>
+    </tr>
+    <tr>
+      <td><a href="da-nang.html">Đà Nẵng</a></td>
+      <td class="price">178</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 39<br>Internet game thu: 11<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 21</td>
+    </tr>
+    <tr>
+      <td><a href="bac-ninh.html">Bắc Ninh</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="lai-chau.html">Lai Châu</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="dien-bien.html">Điện Biên</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="phu-tho.html">Phú Thọ</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="an-giang.html">An Giang</a></td>
+      <td class="price">151</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 34<br>Internet gia dinh: 27<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 11</td>
+    </tr>
+    <tr>
+      <td><a href="dak-lak.html">Đắk Lắk</a></td>
+      <td class="price">166</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 35<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="vinh-long.html">Vĩnh Long</a></td>
+      <td class="price">151</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 34<br>Internet gia dinh: 27<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 11</td>
+    </tr>
+    <tr>
+      <td><a href="dong-thap.html">Đồng Tháp</a></td>
+      <td class="price">151</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 34<br>Internet gia dinh: 27<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 11</td>
+    </tr>
+    <tr>
+      <td><a href="tay-ninh.html">Tây Ninh</a></td>
+      <td class="price">154</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 37<br>Internet gia dinh: 25<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 30<br>FPT Camera: 7</td>
+    </tr>
+    <tr>
+      <td><a href="lam-dong.html">Lâm Đồng</a></td>
+      <td class="price">154</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 37<br>Internet gia dinh: 25<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 30<br>FPT Camera: 7</td>
+    </tr>
+    <tr>
+      <td><a href="dong-nai.html">Đồng Nai</a></td>
+      <td class="price">154</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 37<br>Internet gia dinh: 25<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 30<br>FPT Camera: 7</td>
+    </tr>
+    <tr>
+      <td><a href="khanh-hoa.html">Khánh Hòa</a></td>
+      <td class="price">178</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 39<br>Internet game thu: 11<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 21</td>
+    </tr>
+    <tr>
+      <td><a href="thai-nguyen.html">Thái Nguyên</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="can-tho.html">Cần Thơ</a></td>
+      <td class="price">151</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 34<br>Internet gia dinh: 27<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 11</td>
+    </tr>
+    <tr>
+      <td><a href="quang-ngai.html">Quảng Ngãi</a></td>
+      <td class="price">166</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 35<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="hue.html">Huế</a></td>
+      <td class="price">166</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 35<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="quang-tri.html">Quảng Trị</a></td>
+      <td class="price">166</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 35<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="ha-tinh.html">Hà Tĩnh</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="nghe-an.html">Nghệ An</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="thanh-hoa.html">Thanh Hóa</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="hung-yen.html">Hưng Yên</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="quang-ninh.html">Quảng Ninh</a></td>
+      <td class="price">180</td>
+      <td>Internet tong hop: 36<br>Internet ca nhan: 40<br>Internet gia dinh: 38<br>Internet game thu: 6<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="hai-phong.html">Hải Phòng</a></td>
+      <td class="price">144</td>
+      <td>Internet tong hop: 33<br>Internet ca nhan: 32<br>Internet gia dinh: 26<br>Internet game thu: 6<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="ninh-binh.html">Ninh Bình</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="tuyen-quang.html">Tuyên Quang</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="cao-bang.html">Cao Bằng</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="lang-son.html">Lạng Sơn</a></td>
+      <td class="price">156</td>
+      <td>Internet tong hop: 32<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="son-la.html">Sơn La</a></td>
+      <td class="price">193</td>
+      <td>Internet tong hop: 39<br>Internet ca nhan: 44<br>Internet gia dinh: 38<br>Internet game thu: 9<br>Internet doanh nghiep: 10<br>FPT Play: 36<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="lao-cai.html">Lào Cai</a></td>
+      <td class="price">158</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 38<br>Internet gia dinh: 29<br>Internet game thu: 5<br>Internet doanh nghiep: 10<br>FPT Play: 33<br>FPT Camera: 9</td>
+    </tr>
+    <tr>
+      <td><a href="gia-lai.html">Gia Lai</a></td>
+      <td class="price">166</td>
+      <td>Internet tong hop: 35<br>Internet ca nhan: 35<br>Internet gia dinh: 35<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 27<br>FPT Camera: 17</td>
+    </tr>
+    <tr>
+      <td><a href="ca-mau.html">Cà Mau</a></td>
+      <td class="price">151</td>
+      <td>Internet tong hop: 34<br>Internet ca nhan: 34<br>Internet gia dinh: 27<br>Internet game thu: 7<br>Internet doanh nghiep: 10<br>FPT Play: 28<br>FPT Camera: 11</td>
+    </tr>
+      </tbody>
+    </table>
+  </main>
+  <script>
+    const search = document.querySelector('#search');
+    const rows = [...document.querySelectorAll('tbody tr')];
+    const count = document.querySelector('#count');
+    function applyFilter() {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const row of rows) {
+        const show = !q || row.innerText.toLowerCase().includes(q);
+        row.style.display = show ? '' : 'none';
+        if (show) shown++;
+      }
+      count.textContent = shown + ' tinh/thanh';
+    }
+    search.addEventListener('input', applyFilter);
+    applyFilter();
+  </script>
+</body>
+</html>

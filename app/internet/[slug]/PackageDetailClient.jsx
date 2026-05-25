@@ -6,6 +6,7 @@ import { Download, Upload, Check, Clock, ShieldCheck, Settings, ChevronRight, Ph
 import { PRODUCT_DATA } from '@/data/productData';
 import { useRegisterModal } from '@/context/RegisterContext';
 import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 import ProductCardSlider from '@/components/common/ProductCardSlider';
 import styles from './PackageDetail.module.css';
 
@@ -46,7 +47,7 @@ function buildProductIndex() {
 
 export default function PackageDetailClient({ slug }) {
   const { openModal } = useRegisterModal();
-  const { region } = useRegion();
+  const { region, activeCity } = useRegion();
   const [hardwareImgs, setHardwareImgs] = useState([]);
 
   const productIndex = useMemo(() => buildProductIndex(), []);
@@ -109,7 +110,7 @@ export default function PackageDetailClient({ slug }) {
     );
   }
 
-  const price = typeof product.price === 'object' ? product.price[region] || product.price['tinh'] : product.price;
+  const price = getProductPrice(product, activeCity, region);
   const features = product.features || [];
   const priceDisplay = (price || 0).toLocaleString('vi-VN');
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import ProductCardSlider from '@/components/common/ProductCardSlider';
 import { PRODUCT_DATA } from '@/data/productData';
 
-export default function Wifi7Section({ region }) {
+export default function Wifi7Section() {
   const [activeTab, setActiveTab] = useState('speedx2');
 
   const tabs = [
@@ -46,7 +46,6 @@ export default function Wifi7Section({ region }) {
 
       <ProductCardSlider
         data={getFilteredData()}
-        region={region}
         badgeSub="Wi-Fi 7 · XGS-PON"
       />
     </div>

@@ -3,9 +3,12 @@
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 
-export default function ProductSlider({ title, data, region, showLocation }) {
+export default function ProductSlider({ title, data, showLocation }) {
   const scrollRef = useRef(null);
+  const { region, activeCity } = useRegion();
 
   const scroll = (direction) => {
     const { current } = scrollRef;
@@ -54,8 +57,7 @@ export default function ProductSlider({ title, data, region, showLocation }) {
 
       <div className="fpt-track-container" ref={scrollRef}>
         {data.map((item) => {
-          const currentPrice =
-            typeof item.price === "object" ? (item.price[region] || item.price['tinh']) : item.price;
+          const currentPrice = getProductPrice(item, activeCity, region);
 
           return (
             <div key={item.id} className="fpt-card-column">

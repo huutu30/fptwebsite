@@ -33,6 +33,7 @@ export const RegionProvider = ({ children }) => {
     } catch(e) {}
   };
 
+  // nội thành HCM & Hà Nội → 'hcm'; ngoại thành và các tỉnh khác → 'tinh'
   const region = (activeCity === 'hcm' || activeCity === 'ha-noi') ? 'hcm' : 'tinh';
 
   return (

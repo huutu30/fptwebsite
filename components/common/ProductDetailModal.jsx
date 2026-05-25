@@ -12,9 +12,10 @@ const COMMON_FEATURES = [
 ];
 
 import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 
 export default function ProductDetailModal() {
-  const { region } = useRegion();
+  const { region, activeCity } = useRegion();
   const { selectedProduct, closeDetail } = useProductDetail();
   const { openModal } = useRegisterModal();
   const [hardwareImgs, setHardwareImgs] = useState([]);
@@ -107,7 +108,7 @@ export default function ProductDetailModal() {
 
   if (!selectedProduct) return null;
 
-  const price = typeof selectedProduct.price === 'object' ? (selectedProduct.price[region] || selectedProduct.price['tinh']) : selectedProduct.price;
+  const price = getProductPrice(selectedProduct, activeCity, region);
   const features = selectedProduct.features || selectedProduct.details || [];
 
   const handleRegisterClick = () => {

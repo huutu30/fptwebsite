@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRegisterModal } from '@/context/RegisterContext';
 import { useProductDetail } from '@/context/ProductDetailContext';
+import { useRegion } from '@/context/RegionContext';
+import { getProductPrice } from '@/data/priceHelper';
 
 export default function ProductSlider({ title, data }) {
   const scrollRef = useRef(null);
@@ -50,6 +52,8 @@ function ProductCard({ item }) {
   const isGbps = item?.dl?.toLowerCase()?.includes('gbps');
   const { openModal } = useRegisterModal();
   const { openDetail } = useProductDetail();
+  const { region, activeCity } = useRegion();
+  const displayPrice = getProductPrice(item, activeCity, region);
 
   return (
     <div className="card-fpt-inner">
@@ -62,7 +66,7 @@ function ProductCard({ item }) {
         <h3 className="product-name">{item.name}</h3>
         
         <div className="price-tag-row">
-          <span className="num">{(item.price?.hcm || item.price || 0).toLocaleString()}đ</span>
+          <span className="num">{(displayPrice || 0).toLocaleString()}đ</span>
           <span className="unit">/tháng</span>
         </div>
 

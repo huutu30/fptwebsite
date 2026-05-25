@@ -7,6 +7,7 @@ import { ChevronDown, Phone, Menu, X, Wifi, Tv, Monitor, Headphones, Home } from
 import { NAV_MENU, HOTLINE, iconMap } from '@/data/menuConfig';
 
 import { useRegion } from '@/context/RegionContext';
+import { CITY_DATA } from '@/data/cityData';
 
 /**
  * Navbar - Thanh điều hướng chính (Next.js Client Component)
@@ -15,17 +16,13 @@ import { useRegion } from '@/context/RegionContext';
  */
 export default function Navbar() {
   const { activeCity, region, changeCity } = useRegion();
-  const CITY_MAP = {
-    'hcm': 'TP. Hồ Chí Minh',
-    'ha-noi': 'Hà Nội',
-    'da-nang': 'Đà Nẵng',
-    'hai-phong': 'Hải Phòng',
-    'binh-duong': 'Bình Dương',
-    'dong-nai': 'Đồng Nai',
-    'khanh-hoa': 'Khánh Hòa',
-    'vung-tau': 'Vũng Tàu',
-    'toan-quoc': 'Ngoại thành (Tỉnh)',
-  };
+  // Build CITY_MAP dynamically from CITY_DATA (35 tỉnh thành + toan-quoc)
+  const CITY_MAP = Object.fromEntries(
+    Object.entries(CITY_DATA).map(([key, val]) => [key, val.name])
+  );
+  const otherProvinces = Object.entries(CITY_DATA)
+    .filter(([key]) => !['hcm', 'hcm-ngoai-thanh', 'ha-noi', 'ha-noi-ngoai-thanh', 'toan-quoc'].includes(key))
+    .sort((a, b) => a[1].name.localeCompare(b[1].name, 'vi'));
   const [activeMega, setActiveMega] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -132,20 +129,73 @@ export default function Navbar() {
               title="Nhấn để chọn khu vực xem giá"
               id="btn-region"
             >
-              <span>{`📍 ${CITY_MAP[activeCity]}`}</span>
+              <span>{CITY_MAP[activeCity]}</span>
               <ChevronDown size={12} aria-hidden="true" />
             </button>
-            <div className="region-dropdown" id="region-dropdown">
+             <div className="region-dropdown" id="region-dropdown">
               <span className="region-label">Xem giá theo khu vực</span>
-              {Object.entries(CITY_MAP).map(([key, label]) => (
+              
+              {/* 1. Nhóm Hồ Chí Minh */}
+              <div className="region-group">
+                <div className="region-group-header">
+                  <span>Hồ Chí Minh</span>
+                </div>
+                <button
+                  className={`region-option-nested ${activeCity === 'hcm' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('hcm')}
+                >
+                  Nội thành
+                </button>
+                <button
+                  className={`region-option-nested ${activeCity === 'hcm-ngoai-thanh' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('hcm-ngoai-thanh')}
+                >
+                  Ngoại thành
+                </button>
+              </div>
+
+              <div className="region-divider"></div>
+
+              {/* 2. Nhóm Hà Nội */}
+              <div className="region-group">
+                <div className="region-group-header">
+                  <span>Hà Nội</span>
+                </div>
+                <button
+                  className={`region-option-nested ${activeCity === 'ha-noi' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('ha-noi')}
+                >
+                  Nội thành
+                </button>
+                <button
+                  className={`region-option-nested ${activeCity === 'ha-noi-ngoai-thanh' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('ha-noi-ngoai-thanh')}
+                >
+                  Ngoại thành
+                </button>
+              </div>
+
+              {/* 3. Các tỉnh thành khác */}
+              <span className="region-label">Các tỉnh thành khác</span>
+              {otherProvinces.map(([key, val]) => (
                 <button
                   key={key}
                   className={`region-option ${activeCity === key ? 'active' : ''}`}
                   onClick={() => handleRegionSelect(key)}
                 >
-                  {label}
+                  {val.name}
                 </button>
               ))}
+
+              <div className="region-divider"></div>
+
+              {/* 4. Toàn quốc */}
+              <button
+                className={`region-option ${activeCity === 'toan-quoc' ? 'active' : ''}`}
+                onClick={() => handleRegionSelect('toan-quoc')}
+              >
+                Toàn quốc
+              </button>
             </div>
           </div>
         </div>
@@ -184,21 +234,73 @@ export default function Navbar() {
               aria-label={`Đổi khu vực – Hiện tại: ${CITY_MAP[activeCity]}`}
               id="btn-mobile-region"
             >
-              <span className="mobile-loc-dot">📍</span>
               <span>{CITY_MAP[activeCity]}</span>
               <ChevronDown size={12} aria-hidden="true" />
             </button>
             <div className="region-dropdown" id="mobile-region-dropdown" style={{ top: '100%', right: '0', left: 'auto', minWidth: '220px', width: 'max-content' }}>
               <span className="region-label">Xem giá theo khu vực</span>
-              {Object.entries(CITY_MAP).map(([key, label]) => (
+              
+              {/* 1. Nhóm Hồ Chí Minh */}
+              <div className="region-group">
+                <div className="region-group-header">
+                  <span>Hồ Chí Minh</span>
+                </div>
+                <button
+                  className={`region-option-nested ${activeCity === 'hcm' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('hcm')}
+                >
+                  Nội thành
+                </button>
+                <button
+                  className={`region-option-nested ${activeCity === 'hcm-ngoai-thanh' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('hcm-ngoai-thanh')}
+                >
+                  Ngoại thành
+                </button>
+              </div>
+
+              <div className="region-divider"></div>
+
+              {/* 2. Nhóm Hà Nội */}
+              <div className="region-group">
+                <div className="region-group-header">
+                  <span>Hà Nội</span>
+                </div>
+                <button
+                  className={`region-option-nested ${activeCity === 'ha-noi' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('ha-noi')}
+                >
+                  Nội thành
+                </button>
+                <button
+                  className={`region-option-nested ${activeCity === 'ha-noi-ngoai-thanh' ? 'active' : ''}`}
+                  onClick={() => handleRegionSelect('ha-noi-ngoai-thanh')}
+                >
+                  Ngoại thành
+                </button>
+              </div>
+
+              {/* 3. Các tỉnh thành khác */}
+              <span className="region-label">Các tỉnh thành khác</span>
+              {otherProvinces.map(([key, val]) => (
                 <button
                   key={key}
                   className={`region-option ${activeCity === key ? 'active' : ''}`}
                   onClick={() => handleRegionSelect(key)}
                 >
-                  {label}
+                  {val.name}
                 </button>
               ))}
+
+              <div className="region-divider"></div>
+
+              {/* 4. Toàn quốc */}
+              <button
+                className={`region-option ${activeCity === 'toan-quoc' ? 'active' : ''}`}
+                onClick={() => handleRegionSelect('toan-quoc')}
+              >
+                Toàn quốc
+              </button>
             </div>
           </div>
 
