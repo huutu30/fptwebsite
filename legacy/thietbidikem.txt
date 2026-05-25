@@ -1,0 +1,254 @@
+Tổng hợp Device Mapping - Tất cả gói FPT
+IMPORTANT
+
+Tổng: 102 gói trên 3 file data | Đã có devices: 47 | Thiếu devices: 55
+
+Thống kê tổng quan
+File	Tổng gói	Đã có devices	Thiếu devices
+internetData.js	44	29	15
+truyenHinhData.js	43	8	35
+wifi7Data.js	15	10	5
+Tổng	102	47	55
+Ảnh hardware có sẵn (public/images/hardware/)
+File	Path
+modem-wifi-6.webp	/images/hardware/modem-wifi-6.webp
+ont-1-port.webp	/images/hardware/ont-1-port.webp
+access-point.webp	/images/hardware/access-point.webp
+fpt-play-box.webp	/images/hardware/fpt-play-box.webp
+dich-vu-fpt-play-vip.jpg	/images/hardware/dich-vu-fpt-play-vip.jpg
+fpt-play-vvip.webp	/images/hardware/fpt-play-vvip.webp
+ngoai-hang-anh.webp	/images/hardware/ngoai-hang-anh.webp
+modem-wifi-7.webp	/images/hardware/modem-wifi-7.webp
+mesh-wifi-7.webp	/images/hardware/mesh-wifi-7.webp
+camera-iq4s.webp	/images/hardware/camera-iq4s.webp
+zplay.webp	/images/hardware/zplay.webp
+no-ads-fpt-play.png	/images/hardware/no-ads-fpt-play.png
+ultra-fast.webp	/images/hardware/ultra-fast.webp
+PHẦN A: internetData.js — 15 gói thiếu devices
+A1. Section ca_nhan (4 gói thiếu)
+#	ID	Tên gói	Thiết bị đề xuất (từ fpt.vn features)
+1	giga-f1 (gia_dinh)	Internet Giga F1	Modem Wi-Fi 6, ONT 1 port, Access Point
+2	sky-f1 (gia_dinh)	Internet Sky F1	Modem Wi-Fi 6, ONT 1 port, Access Point
+3	sky-f2 (ca_nhan)	Internet Sky F2	Modem Wi-Fi 6, ONT 1 port, 2x Access Point
+4	combo-meta (f_game section)	Combo Meta	Modem Wi-Fi 6, FPT Play Box, Dịch vụ FPT Play VIP
+NOTE
+
+Các gói Fx (F1, F2, F3) = Modem Wi-Fi 6 + ONT + số lượng Access Point tương ứng (1, 2, 3)
+
+js
+// Internet Sky F2 (2 Access Point)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/access-point.webp', label: '02 Thiết bị Access Point' },
+]
+A2. Section doanh_nghiep (11 gói thiếu)
+#	ID	Tên gói	Thiết bị đề xuất
+5	lux500	LUX 500	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast
+6	lux800	LUX 800	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast
+7	c-lux500	COMBO LUX 500	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast, FPT Play VIP
+8	c-lux800	COMBO LUX 800	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast, FPT Play VIP
+9	s300-biz	SUPER 300 BIZ	Thiết bị cân bằng tải
+10	s300-biz-plus	SUPER 300 BIZ PLUS	Thiết bị cân bằng tải, Access Point
+11	s500-biz	SUPER 500 BIZ	Thiết bị cân bằng tải, Access Point
+12	s500-biz-plus	SUPER 500 BIZ PLUS	Thiết bị cân bằng tải, Access Point
+13	s600-biz	SUPER 600 BIZ	Thiết bị cân bằng tải, Access Point
+14	s600-biz-plus	SUPER 600 BIZ PLUS	Thiết bị cân bằng tải, Access Point
+15	s800-biz	SUPER 800 BIZ	Thiết bị cân bằng tải, Access Point
+WARNING
+
+Gói SUPER BIZ dùng thiết bị cân bằng tải — cần confirm nếu có ảnh hardware riêng cho "cân bằng tải" hay dùng placeholder
+
+js
+// LUX 500
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+  { src: '/images/hardware/ultra-fast.webp', label: 'Ultra Fast tối ưu tốc độ' },
+]
+// SUPER 300 BIZ (chỉ có cân bằng tải, không có AP)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Thiết bị cân bằng tải' },
+]
+// SUPER BIZ PLUS (có cân bằng tải + AP)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Thiết bị cân bằng tải' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+]
+PHẦN B: truyenHinhData.js — 35 gói thiếu devices
+B1. Section the_thao (6 gói thiếu)
+Nguồn: fpt.vn/internet/combo-internet-*-vvip → section "Nhận thêm trong gói này"
+
+#	ID	Tên gói	Thiết bị (từ fpt.vn)
+1	c-the-thao-sky-f3	Combo thể thao Sky F3	Modem Wi-Fi 6, ONT 1 port, 3x Access Point, FPT Play Box, FPT Play V.VIP, NHA
+2	c-the-thao-meta-f3	Combo thể thao Meta F3	Modem Wi-Fi 6, ONT 1 port, 3x Access Point, FPT Play Box, FPT Play V.VIP, NHA
+3	c-the-thao-lux500	Combo thể thao Lux500	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast, FPT Play V.VIP, NHA
+4	c-the-thao-lux800	Combo thể thao Lux800	Modem Wi-Fi 6, ONT 1 port, Access Point, Ultra Fast, FPT Play V.VIP, NHA
+5	c-the-thao-speedx10	Combo thể thao SpeedX10	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play Box, FPT Play V.VIP, NHA
+6	c-the-thao-speedx10-pro	Combo thể thao SpeedX10 Pro	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play Box, FPT Play V.VIP, NHA
+NOTE
+
+Pattern xác nhận từ fpt.vn:
+
+Sky/Meta Fx (thể thao): Modem Wi-Fi 6 + ONT + Fx AP + Play Box + V.VIP + NHA
+Lux (thể thao): Modem Wi-Fi 6 + ONT + AP + Ultra Fast + V.VIP + NHA
+SpeedX (thể thao): Wi-Fi 7 + Mesh Wi-Fi 7 + Play Box + V.VIP + NHA
+js
+// c-the-thao-sky-f3
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/access-point.webp', label: '03 Thiết bị Access Point' },
+  { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play V.VIP' },
+  { src: '/images/hardware/ngoai-hang-anh.webp', label: 'Xem trọn 380 trận Ngoại hạng Anh' },
+]
+// c-the-thao-lux500
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/ultra-fast.webp', label: 'Ultra Fast giảm ping' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play V.VIP' },
+  { src: '/images/hardware/ngoai-hang-anh.webp', label: 'Xem trọn 380 trận Ngoại hạng Anh' },
+]
+// c-the-thao-speedx10
+devices: [
+  { src: '/images/hardware/modem-wifi-7.webp', label: 'Wi-Fi 7 tăng khả năng tải gấp 4 lần' },
+  { src: '/images/hardware/mesh-wifi-7.webp', label: 'Thiết bị Mesh Wi-Fi 7' },
+  { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play V.VIP' },
+  { src: '/images/hardware/ngoai-hang-anh.webp', label: 'Xem trọn 380 trận Ngoại hạng Anh' },
+]
+B2. Section fpt_play_only (2 gói — KHÔNG cần devices)
+#	ID	Tên gói	Ghi chú
+—	vvip1	Gói V.VIP 1	Gói truyền hình standalone, không có thiết bị phần cứng
+—	vvip2	Gói V.VIP 2	Gói truyền hình standalone, không có thiết bị phần cứng
+TIP
+
+Gói V.VIP chỉ là dịch vụ xem truyền hình, KHÔNG có thiết bị phần cứng đi kèm → có thể bỏ qua hoặc để devices: []
+
+B3. Section additional_home_packages (27 gói thiếu — tất cả compact 1 dòng)
+Pattern chung cho gói combo gia đình (từ fpt.vn):
+
+Combo Giga/Sky/Meta (không F): Modem Wi-Fi 6 + FPT Play Box + FPT Play VIP
+Combo Fx: Modem Wi-Fi 6 + ONT + Fx AP + FPT Play Box + FPT Play VIP
+Combo Lite (không F): Modem Wi-Fi 6 + FPT Play VIP
+Combo Fx Lite: Modem Wi-Fi 6 + ONT + Fx AP + Wifi Mesh + FPT Play VIP
+Combo An Tâm: Modem Wi-Fi 6 + FPT Play Box + FPT Play VIP + F-Safe
+Combo F-Game Lite: Modem Wi-Fi 6 + Ultra Fast + FPT Play VIP
+Combo F-Game Fx Lite: Modem Wi-Fi 6 + Fx AP + Fx Wifi Mesh + Ultra Fast + FPT Play VIP
+FPT SpeedX2/X10 Pro Lite: Wi-Fi 7 + Mesh Wi-Fi 7 + FPT Play VIP
+#	ID	Tên gói	Thiết bị đề xuất
+1	combo-sky	Combo Sky	Modem Wi-Fi 6, FPT Play Box, FPT Play VIP
+2	combo-giga	Combo Giga	Modem Wi-Fi 6, FPT Play Box, FPT Play VIP
+3	combo-meta	Combo Meta	Modem Wi-Fi 6, FPT Play Box, FPT Play VIP
+4	combo-giga-f1	Combo Giga F1	Modem Wi-Fi 6, ONT, AP, FPT Play Box, FPT Play VIP
+5	combo-sky-f1	Combo Sky F1	Modem Wi-Fi 6, ONT, AP, FPT Play Box, FPT Play VIP
+6	combo-meta-f1	Combo Meta F1	Modem Wi-Fi 6, ONT, AP, FPT Play Box, FPT Play VIP
+7	combo-meta-f2	Combo Meta F2	Modem Wi-Fi 6, ONT, 2x AP, FPT Play Box, FPT Play VIP
+8	combo-meta-f3	Combo Meta F3	Modem Wi-Fi 6, ONT, 3x AP, FPT Play Box, FPT Play VIP
+9	combo-an-tam	Combo An Tâm	Modem Wi-Fi 6, FPT Play Box, FPT Play VIP
+10	combo-giga-lite	Combo Giga Lite	Modem Wi-Fi 6, FPT Play VIP
+11	combo-giga-f1-lite	Combo Giga F1 Lite	Modem Wi-Fi 6, ONT, AP, Wifi Mesh, FPT Play VIP
+12	combo-giga-f2-lite	Combo Giga F2 Lite	Modem Wi-Fi 6, ONT, 2x AP, Wifi Mesh, FPT Play VIP
+13	combo-giga-f3-lite	Combo Giga F3 Lite	Modem Wi-Fi 6, ONT, 3x AP, Wifi Mesh, FPT Play VIP
+14	combo-sky-lite	Combo Sky Lite	Modem Wi-Fi 6, FPT Play VIP
+15	combo-sky-f1-lite	Combo Sky F1 Lite	Modem Wi-Fi 6, ONT, AP, Wifi Mesh, FPT Play VIP
+16	combo-sky-f2-lite	Combo Sky F2 Lite	Modem Wi-Fi 6, ONT, 2x AP, Wifi Mesh, FPT Play VIP
+17	combo-sky-f3-lite	Combo Sky F3 Lite	Modem Wi-Fi 6, ONT, 3x AP, Wifi Mesh, FPT Play VIP
+18	combo-meta-lite	Combo Meta Lite	Modem Wi-Fi 6, FPT Play VIP
+19	combo-meta-f1-lite	Combo Meta F1 Lite	Modem Wi-Fi 6, ONT, AP, Wifi Mesh, FPT Play VIP
+20	combo-meta-f2-lite	Combo Meta F2 Lite	Modem Wi-Fi 6, ONT, 2x AP, Wifi Mesh, FPT Play VIP
+21	combo-meta-f3-lite	Combo Meta F3 Lite	Modem Wi-Fi 6, ONT, 3x AP, Wifi Mesh, FPT Play VIP
+22	combo-fgame-lite	Combo F-Game Lite	Modem Wi-Fi 6, Ultra Fast, FPT Play VIP
+23	combo-fgame-f1-lite	Combo F-Game F1 Lite	Modem Wi-Fi 6, ONT, AP, Wifi Mesh, Ultra Fast, FPT Play VIP
+24	combo-fgame-f2-lite	Combo F-Game F2 Lite	Modem Wi-Fi 6, ONT, 2x AP, 2x Wifi Mesh, Ultra Fast, FPT Play VIP
+25	combo-fgame-f3-lite	Combo F-Game F3 Lite	Modem Wi-Fi 6, ONT, 3x AP, 3x Wifi Mesh, Ultra Fast, FPT Play VIP
+26	fpt-speedx2-pro-lite	FPT SpeedX2 Pro Lite	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play VIP
+27	fpt-speedx10-pro-lite	FPT SpeedX10 Pro Lite	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play VIP
+js
+// combo-sky (Combo gia đình cơ bản)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+// combo-giga-f1 (Combo gia đình + 1 AP)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+  { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+// combo-giga-lite (Lite = không có Play Box)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+// combo-giga-f1-lite (Lite + 1 AP + Mesh)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ont-1-port.webp', label: 'Bộ chuyển đổi ONT 1 port 1G' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+// combo-fgame-lite (F-Game Lite)
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Modem Wi-Fi 6 băng tần kép' },
+  { src: '/images/hardware/ultra-fast.webp', label: 'Ultra Fast hỗ trợ hơn 50+ tựa game' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+// fpt-speedx2-pro-lite
+devices: [
+  { src: '/images/hardware/modem-wifi-7.webp', label: 'Wi-Fi 7 tăng khả năng tải gấp 4 lần' },
+  { src: '/images/hardware/mesh-wifi-7.webp', label: 'Thiết bị Mesh Wi-Fi 7' },
+  { src: '/images/hardware/dich-vu-fpt-play-vip.jpg', label: 'Dịch vụ FPT Play VIP' },
+]
+PHẦN C: wifi7Data.js — 5 gói thiếu devices
+C1. Section wifi_7 (5 gói — section cũ, khác với wifi7_plans)
+#	ID	Tên gói	Thiết bị đề xuất
+1	speedx2	FPT SpeedX2	Wi-Fi 7, Mesh Wi-Fi 7, ZPlay
+2	speedx2-pro	FPT SpeedX2 Pro	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play Box + VIP
+3	speedx10	FPT SpeedX10	Wi-Fi 7, Mesh Wi-Fi 7, ZPlay
+4	speedx10-pro	FPT SpeedX10 Pro	Wi-Fi 7, Mesh Wi-Fi 7, FPT Play Box + VIP
+5	super-800-biz-plus	SUPER 800 BIZ PLUS	Thiết bị cân bằng tải, Access Point
+NOTE
+
+Section wifi_7 chứa ID trùng với wifi7_plans (speedx2, speedx2-pro, speedx10, speedx10-pro). Devices mapping giống nhau nhưng cần inject vào cả 2 section.
+
+js
+// speedx2 (wifi_7 section)
+devices: [
+  { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
+  { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
+  { src: '/images/hardware/zplay.webp', label: 'Gói giải trí ZPlay' },
+]
+// speedx2-pro (wifi_7 section)
+devices: [
+  { src: '/images/hardware/modem-wifi-7.webp', label: 'Modem Wi-Fi 7 kết nối đến 100 thiết bị' },
+  { src: '/images/hardware/mesh-wifi-7.webp', label: '01 Thiết bị Mesh Wi-Fi 7' },
+  { src: '/images/hardware/fpt-play-box.webp', label: 'FPT Play Box + Gói FPT Play VIP' },
+]
+// super-800-biz-plus
+devices: [
+  { src: '/images/hardware/modem-wifi-6.webp', label: 'Thiết bị cân bằng tải' },
+  { src: '/images/hardware/access-point.webp', label: 'Thiết bị Access Point' },
+]
+Câu hỏi cần xác nhận
+IMPORTANT
+
+Gói SUPER BIZ dùng "thiết bị cân bằng tải" — có ảnh hardware riêng không? Hay dùng modem-wifi-6.webp làm placeholder?
+Gói V.VIP 1 & V.VIP 2 — bỏ qua devices (vì là gói dịch vụ thuần) hay thêm devices: [] rỗng?
+Gói Lite có Wifi Mesh — features ghi "Tặng 1 Wifi Mesh" nhưng không có ảnh wifi-mesh.webp riêng (khác với mesh-wifi-7.webp). Dùng ảnh nào?
+Tổng 102 gói (không phải 82 như đã nhớ) — có đúng không? Có thể con số 82 trước đó đã không đếm section doanh_nghiep và fpt_play_only.
+Tóm tắt hành động tiếp theo
+Sau khi review xong:
+
+Cập nhật deviceMap trong script add-devices.cjs (hoặc tạo mới)
+Chạy script cho truyenHinhData.js (35 gói)
+Chạy script cho wifi7Data.js (5 gói)
+Chạy lại cho internetData.js (15 gói thiếu — chủ yếu doanh nghiệp)
+Verify tất cả file

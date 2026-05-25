@@ -1,0 +1,368 @@
+.packagePage {
+  padding-bottom: 60px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #64748b;
+}
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: #f57020;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: #d45a10;
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Detail Grid */
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  align-items: start;
+}
+
+/* Left Column */
+.leftCol {
+  position: sticky;
+  top: 100px;
+}
+
+.productImageWrapper {
+  background: linear-gradient(135deg, #fff5eb, #fef3e2);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Hardware */
+.hardwareSection {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.hardwareGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+.hardwareItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hardwareImgWrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.hardwareImgWrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.hardwareItem span {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+/* Right Column */
+.rightCol {
+  padding: 10px 0;
+}
+
+.productName {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.priceBox {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #fff5eb, #fef9f3);
+  border-radius: 12px;
+  border: 1px solid #fed7aa;
+}
+
+.priceValue {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+.priceUnit {
+  font-size: 16px;
+  color: #9a3412;
+  font-weight: 500;
+}
+
+/* Speed */
+.speedBox {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.speedLabel {
+  font-size: 13px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.speedValues {
+  display: flex;
+  gap: 24px;
+}
+
+.speedItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.dlIcon {
+  color: #22c55e;
+}
+
+.ulIcon {
+  color: #3b82f6;
+}
+
+/* Features */
+.featureSection {
+  margin-bottom: 24px;
+}
+
+.sectionLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f8fafc;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: #22c55e;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.commonFeature {
+  color: #64748b !important;
+  font-size: 14px !important;
+}
+
+.commonFeature svg {
+  color: #f57020;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* CTA */
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btnRegister {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f57020, #ea580c);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 14px rgba(245, 112, 32, 0.35);
+}
+
+.btnRegister:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 112, 32, 0.45);
+}
+
+.btnCall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 24px;
+  background: #fff;
+  color: #f57020;
+  border: 2px solid #f57020;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btnCall:hover {
+  background: #fff5eb;
+}
+
+/* Related */
+.relatedSection {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Not Found */
+.notFound {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFound h1 {
+  font-size: 28px;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.notFound p {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.backLink {
+  color: #f57020;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .leftCol {
+    position: static;
+  }
+
+  .productName {
+    font-size: 24px;
+  }
+
+  .priceValue {
+    font-size: 28px;
+  }
+
+  .productImageWrapper {
+    padding: 20px;
+  }
+
+  .productImage {
+    max-height: 250px;
+  }
+
+  .speedValues {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .btnRegister, .btnCall {
+    padding: 12px 16px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+

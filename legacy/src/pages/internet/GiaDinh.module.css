@@ -1,0 +1,507 @@
+.giaDinhPage {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+  color: #fff;
+  padding: 50px 40px;
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.heroTitle {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.heroTitle span {
+  color: #fbbf24;
+}
+
+.heroDesc {
+  font-size: 18px;
+  color: #e0f2fe;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f57020;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.heroBtn:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 112, 32, 0.3);
+}
+
+/* TABS NAVIGATION */
+.tabsNav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.tabBtn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+.tabBtn.active {
+  background: #1e3a8a;
+  color: #fff;
+  border-color: #1e3a8a;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+/* SECTION COMMON */
+.section {
+  padding: 40px 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.sectionDesc {
+  font-size: 18px;
+  color: #475569;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* HIGHLIGHTS GRID */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.highlightCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 28px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+}
+
+.highlightCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-color: #f57020;
+}
+
+.highlightCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.highlightCard p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlightIcon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  color: #2563eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s;
+}
+
+.highlightCard:hover .highlightIcon {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* PROCEDURES */
+.procedureBox {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-top: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+.procStep {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.procStep:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 50px;
+  bottom: -20px;
+  width: 2px;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin-right: 24px;
+  border: 2px solid #2563eb;
+  z-index: 1;
+}
+
+.stepContent {
+  padding-top: 12px;
+}
+
+.stepContent h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.stepContent p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.benefitTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* TABLES & SEO CONTENT */
+.seoContent {
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.collapsed {
+  max-height: 400px;
+}
+
+.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  pointer-events: none;
+}
+
+.expanded {
+  max-height: none;
+}
+
+.showMoreWrapper {
+  text-align: center;
+  padding: 30px 0 0 0;
+}
+
+.showMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.showMoreBtn:hover {
+  border-color: #f57020;
+  color: #f57020;
+  box-shadow: 0 6px 15px rgba(245, 112, 32, 0.1);
+}
+
+.seoTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.seoText {
+  font-size: 16px;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 30px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.priceTable th, .priceTable td {
+  padding: 18px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.priceTable th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.priceTable td {
+  font-size: 15px;
+  color: #334155;
+}
+
+.priceTable tr:last-child td {
+  border-bottom: none;
+}
+
+.priceTable tr:hover td {
+  background: #f1f5f9;
+}
+
+.tableCta {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #f57020;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tableCta:hover {
+  background: #ea580c;
+  box-shadow: 0 4px 12px rgba(245, 112, 32, 0.3);
+  transform: translateY(-1px);
+}
+
+/* FAQ SECTION */
+.faqSection {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.faqItem:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.faqItem.faqOpen {
+  border-color: #2563eb;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+
+.faqQuestion {
+  padding: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s;
+  gap: 16px;
+}
+
+.faqQuestion:hover {
+  color: #2563eb;
+}
+
+.faqChevron {
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.faqOpen .faqChevron {
+  transform: rotate(180deg);
+  color: #2563eb;
+}
+
+.faqAnswer {
+  padding: 0 24px 24px;
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tabBtn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+  .hero {
+    padding: 50px 24px;
+  }
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 28px;
+  }
+  .procedureBox {
+    padding: 24px;
+  }
+  .seoContent {
+    padding: 24px;
+  }
+  .priceTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .tabsNav {
+    gap: 8px;
+  }
+  .tabBtn {
+    padding: 10px 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  .faqQuestion {
+    font-size: 16px;
+    padding: 20px;
+  }
+}

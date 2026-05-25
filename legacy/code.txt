@@ -1,0 +1,526 @@
+/* --- FPT SLIDER SYSTEM: CHỐT HẠ 100% --- */
+:root {
+  --fpt-blue: #4e69fd;
+  --fpt-green: #2ecc71;
+  --fpt-orange: #ff7a00;
+}
+/* --- ULTIMATE NAVBAR 2026 - BIGGER & GLOW UP --- */
+:root {
+  --fpt-orange: #f57020;
+  --fpt-blue: #004a9c;
+  --glow-orange: rgba(245, 112, 32, 0.5);
+}
+.navbar-main {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 70px; /* Chiều cao vừa đủ sang trọng */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  display: flex; 
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* CHIA KHỐI CỐ ĐỊNH ĐỂ KHÔNG CHỒNG LÊN NHAU */
+.nav-left { 
+  display: flex; 
+  align-items: center; 
+  flex-shrink: 0; 
+  z-index: 10;
+}
+
+.nav-center { 
+  flex: 1; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.nav-right { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  flex-shrink: 0; 
+  z-index: 10;
+}
+
+/* LOGO */
+.logo-fpt { font-size: 24px; font-weight: 900; color: #f57020; }
+.logo-telecom { font-size: 24px; font-weight: 400; color: #004a9c; }
+
+/* MENU GIỮA & HIỆU ỨNG MÀU MÈ */
+.nav-links { display: flex; list-style: none; gap: 40px; height: 85px; align-items: center; }
+
+.nav-item {
+  text-decoration: none; 
+  font-size: 16px; /* TĂNG CỠ CHỮ */
+  font-weight: 800; /* ĐẬM HƠN */
+  color: #1e293b;
+  padding: 30px 0; 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+}
+
+/* HIỆU ỨNG VẠCH CAM PHÁT SÁNG */
+.nav-item::after {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 0; 
+  height: 4px; 
+  background: var(--fpt-orange); 
+  border-radius: 4px 4px 0 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0px var(--glow-orange);
+}
+
+/* KHI HOVER VÀO TRANG ĐÍCH */
+.nav-links li:hover .nav-item {
+  color: var(--fpt-orange);
+  transform: translateY(-2px); /* Nhích nhẹ lên trên */
+}
+
+.nav-links li:hover .nav-item::after, 
+.nav-item.active::after { 
+  width: 100%; 
+  box-shadow: 0 -4px 15px var(--glow-orange); /* Đổ bóng phát sáng ngược lên trên */
+}
+/* LOCATION PILL (QUAN TRỌNG) */
+.location-pill-modern {
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  background: #f1f5f9; 
+  padding: 8px 16px; 
+  border-radius: 50px;
+  cursor: pointer; 
+  border: 1px solid #e2e8f0;
+  font-size: 13px; 
+  font-weight: 700; 
+  color: #475569;
+  white-space: nowrap; /* QUAN TRỌNG: ÉP CHỮ TRÊN 1 HÀNG */
+  flex-shrink: 0;     /* QUAN TRỌNG: CẤM CO NÚT */
+}
+.location-pill-modern:hover { 
+  background: #fff; 
+  border-color: var(--fpt-orange); 
+  color: var(--fpt-orange); 
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  box-shadow: 0 10px 20px rgba(245, 112, 32, 0.15);
+}
+.search-trigger { cursor: pointer; color: #334155; transition: 0.3s; }
+.search-trigger:hover { 
+  color: var(--fpt-orange); 
+  transform: rotate(90deg) scale(1.2); /* Xoay nhẹ icon tìm kiếm */
+}
+/* MEGA MENU - HIỆU ỨNG LUNG LINH */
+.mega-menu {
+  position: absolute; 
+  top: 85px; 
+  left: 0; 
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.98); 
+  box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+  padding: 50px 0; 
+  opacity: 0; 
+  visibility: hidden;
+  transform: translateY(20px); 
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  border-top: 1px solid #f1f5f9;
+}
+.mega-menu.show { 
+  opacity: 1; 
+  visibility: visible; 
+  transform: translateY(0); 
+}
+.mega-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 60px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+.mega-col h4 { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  margin-bottom: 25px; 
+  font-size: 18px; /* Tăng size tiêu đề cột */
+  font-weight: 850; 
+  color: #0f172a; 
+}
+.mega-col a { 
+  display: block; 
+  color: #64748b; 
+  font-size: 15px; /* Tăng size menu con */
+  margin-bottom: 14px; 
+  transition: 0.3s; 
+  text-decoration: none; 
+  font-weight: 600;
+  position: relative;
+  padding-left: 0;
+}
+/* Hiệu ứng hover menu con cực màu mè */
+.mega-col a:hover { 
+  color: var(--fpt-orange); 
+  padding-left: 12px;
+  background: linear-gradient(90deg, rgba(245,112,32,0.1) 0%, transparent 100%);
+  border-radius: 4px;
+}
+ .fpt-slider-section {
+    padding: 40px 0;
+    background: #fff;
+    
+    /* ÉP CONTAINER Ở GIỮA */
+    max-width: 1240px; /* Chiều rộng chuẩn của web FPT */
+    margin: 0 auto;    /* Căn giữa màn hình */
+    width: 100%;
+    
+    overflow: hidden; 
+}
+.fpt-slider-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    padding: 0 5px;
+}
+
+.fpt-main-title { 
+    font-size: 24px; 
+    font-weight: 800; 
+    color: #1a202c; 
+}
+
+.fpt-nav-btns { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.fpt-nav-btn {
+    width: 36px; 
+    height: 36px; 
+    border-radius: 10px; 
+    border: 1px solid #e2e8f0;
+    background: #f8faff; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: 0.3s; 
+    color: #4e69fd;
+}
+
+.fpt-nav-btn:hover { 
+    background: #00408f; 
+    color: #fff; 
+    border-color: #00408f;
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(78, 105, 253, 0.3);
+}
+
+
+ .fpt-track-container {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Giữ nguyên các phần padding cũ của mày */
+}
+
+.fpt-track-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox [cite: 42] */
+  gap: 0; /* Đã có padding ở column nên để gap bằng 0 */
+}
+
+
+ .fpt-card-column {
+  flex: 0 0 25%; /* Không giãn, không co, chiếm đúng 25% chiều rộng */
+  min-width: 250px; /* Độ rộng tối thiểu để không bị bóp nghẹt [cite: 44] */
+  max-width: 310px; /* Giới hạn độ rộng tối đa để cân đối với container [cite: 45] */
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch; /* Đảm bảo các card cao bằng nhau [cite: 46] */
+}
+
+/* --- CHI TIẾT CARD ITEM: BẢN TỐI ƯU TRIỆT ĐỂ --- */
+.fpt-card-item {
+    background: #fff;
+    border-radius: 12px; /* Bo góc nhẹ cho hiện đại */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 100%; 
+    /* 1. KHÓA CHIỀU CAO: 450px là cực kỳ gọn cho Card 4 cột */
+    min-height: 450px; 
+    
+    border: 1px solid #eef0f2;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+
+ .fpt-card-img {
+    width: 100%;
+    height: 180px; /* Hoặc chiều cao mày thấy vừa mắt */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa; /* Nền nhẹ để nếu ảnh trong suốt nhìn vẫn đẹp */
+    border-radius: 12px 12px 0 0;
+}
+
+.fpt-card-img img {
+    width: 100%;
+    height: 100%;
+    /* THUỘC TÍNH QUAN TRỌNG NHẤT */
+    object-fit: contain; 
+    /* 'contain' giúp ảnh hiện đầy đủ không bị mất góc, 
+       nếu mày muốn ảnh tràn khung thì đổi thành 'cover' */
+    padding: 10px; /* Tạo khoảng trống để ảnh không dính sát mép khung */
+    transition: transform 0.3s ease;
+}
+
+.fpt-card-content {
+    flex: 1;
+    /* 3. PADDING CỰC GỌN: Dồn diện tích cho nội dung */
+    padding: 10px 14px 14px 14px; 
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Ép các phần tử sát rạt nhau */
+}
+
+/* 4. CHỮ TO - DÒNG SÁT */
+.fpt-item-name {
+    font-size: 22px; /* Chữ to rõ */
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0; 
+    line-height: 1.1; /* Ép dòng sát lại */
+}
+
+.fpt-price-row {
+    margin: 2px 0 6px 0; /* Khoảng cách cực nhỏ */
+}
+
+.fpt-price-num {
+    font-size: 28px; /* Giá tiền nổi bật */
+    font-weight: 800;
+    color: #00408f;
+    line-height: 1;
+}
+
+/* 5. TÍNH NĂNG: CHỮ TO - KHOẢNG CÁCH HẸP */
+.fpt-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Ép các dòng tính năng sát nhau */
+}
+
+.fpt-feature-list li {
+    font-size: 15px; /* Chữ to dễ đọc */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #334155;
+    line-height: 1.2;
+}
+
+/* --- NÚT ĐĂNG KÝ: CHẮC CHẮN --- */
+.fpt-btn-order {
+    margin-top: auto; 
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #00408f !important; 
+    color: #ffffff !important; 
+    height: 44px; /* Nút gọn gàng */
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.fpt-btn-order:hover {
+    background-color: #f57020 !important; 
+    box-shadow: 0 4px 12px rgba(245, 112, 32, 0.2);
+}
+
+ .fpt-card-item:hover .fpt-card-img img {
+    transform: scale(1.05); /* Hiệu ứng zoom nhẹ khi di chuột vào cho xịn */
+}
+
+
+.fpt-card-item:hover .fpt-card-img img { transform: scale(1.1); }
+
+.fpt-hot-badge {
+  position: absolute; top: 10px; left: 10px; background: #ff4d4f;
+  color: #fff; padding: 4px 10px; border-radius: 8px; font-size: 10px; font-weight: 800;
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.4);
+}
+
+
+
+/* SPEED BAR: MẠNH MẼ */
+.fpt-speed-visual { 
+  background: #f9fbff; border-radius: 12px; padding: 10px; 
+  margin-bottom: 12px; border: 1px solid #edf2f7; 
+}
+.fpt-speed-line { margin-bottom: 6px; }
+.fpt-speed-info { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 2px; }
+.fpt-speed-info strong { font-size: 15px; color: #1e293b; font-weight: 900; }
+
+.fpt-bar-bg { width: 100%; height: 7px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+.fpt-bar-fill { height: 100%; border-radius: 10px; transition: width 1s ease-in-out; }
+.dl-blue { background: linear-gradient(to right, #4e69fd, #00c6ff); }
+.ul-green { background: linear-gradient(to right, #2ecc71, #39d353); }
+
+
+/* MOBILE: HIỆN 1 CARD + 1 MẨU */
+@media (max-width: 768px) {
+  .fpt-card-column { min-width: 82% !important; max-width: 82% !important; flex: 0 0 82% !important; }
+  .fpt-track-container { margin: 0; padding-left: 15px; width: 100%; }
+}
+
+/* phần style cho nút đăng ký, trang đăng ký*/
+/* Layout tổng cho trang */
+.register-page {
+  background: #f4f7fa;
+  min-height: 80vh;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.register-wrapper {
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Bên trái: Thông tin ưu đãi */
+.register-info-side {
+  flex: 1;
+  background: #00408f;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-info-side h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f57020; /* Màu cam FPT */
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.benefit-list li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Bên phải: Form */
+.register-form-side {
+  flex: 1.2;
+  padding: 40px;
+}
+
+.main-reg-form .input-group {
+  margin-bottom: 20px;
+}
+
+.main-reg-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.main-reg-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.main-reg-form input:focus {
+  border-color: #f57020;
+  outline: none;
+  box-shadow: 0 0 5px rgba(245, 112, 32, 0.2);
+}
+
+.readonly-input {
+  background: #f9f9f9;
+  font-weight: bold;
+  color: #00408f;
+}
+
+.fpt-btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: #f57020;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.fpt-btn-submit:hover {
+  background: #e65f10;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# legacy backup rules
+/legacy/node_modules/
+/legacy/dist/
+/legacy/.vite/
+/legacy/.eslintcache

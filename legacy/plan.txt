@@ -1,0 +1,154 @@
+🎯 Lộ trình SEO: Đạt chuẩn fpt.vn + Vượt đối thủ fptlapdatmang.com
+Tổng quan tình hình
+Dựa trên phân tích 3 nguồn:
+
+fpt.vn (trang chính thức FPT Telecom) — chuẩn SEO mục tiêu
+fptlapdatmang.com (đối thủ phân tích hôm qua) — tham khảo chiến lược content
+Web hiện tại của bạn — đánh giá hiện trạng
+📊 So sánh SEO Technical: Bạn vs fpt.vn
+Yếu tố SEO	fpt.vn ✅	Web của bạn ❌	Mức độ thiếu
+Title tag	FPT Telecom | Dịch vụ lắp đặt Internet, FPT Play & Camera AI	✅ Có nhưng tĩnh (chỉ 1 title cho toàn site)	🟡 Cần cải thiện
+Meta description	Unique cho mỗi trang, kèm tháng/năm	✅ Có nhưng chỉ 1 mô tả chung	🟡 Cần cải thiện
+OG Tags (og:title, og:description, og:image)	✅ Đầy đủ trên mỗi trang	❌ Không có	🔴 Thiếu hoàn toàn
+Canonical URL	✅ Mỗi trang có canonical	❌ Không có	🔴 Thiếu
+Breadcrumbs	✅ Home > Internet wifi > Gói Sky	❌ Không có	🔴 Thiếu
+Structured Data (JSON-LD)	✅ Product, BreadcrumbList, FAQ	❌ Không có	🔴 Thiếu hoàn toàn
+Sitemap.xml	✅ 14 sitemap (pages, news, services, google-news)	❌ Không có	🔴 Thiếu
+Robots.txt	✅ Allow: /, Disallow search pages	❌ Không có	🔴 Thiếu
+H1 unique mỗi trang	✅ Mỗi trang có H1 riêng, chứa keyword chính	❌ Không kiểm soát	🟡 Cần review
+react-helmet / SEO per page	N/A (SSR)	❌ Không dùng react-helmet	🔴 Critical
+Trang chi tiết gói cước	✅ 85+ trang (/internet/goi-sky, /internet/goi-giga...)	❌ Chỉ dùng Modal popup	🔴 Critical
+Trang địa phương	✅ 10 tỉnh/thành (/lap-internet-wifi-hcm, /lap-internet-wifi-ha-noi...)	❌ Không có	🔴 Critical
+Image alt text	✅ Có alt text cho ảnh sản phẩm	❌ Chưa kiểm tra	🟡 Cần review
+URL structure	✅ Clean, SEO-friendly, có hierarchy	✅ Tương đối tốt	✅ OK
+lang="vi"	✅	✅	✅ OK
+Viewport meta	✅	✅	✅ OK
+Preload LCP	✅	✅	✅ OK
+🏗️ So sánh cấu trúc trang: fpt.vn vs fptlapdatmang.com vs Web của bạn
+Loại trang	fpt.vn	fptlapdatmang.com	Web bạn	Kết luận
+Trang chủ	✅	✅	✅	OK
+Internet cá nhân	✅ /internet/ca-nhan	✅	✅	OK
+Internet gia đình	✅ /internet/gia-dinh	✅	✅	OK
+Internet game thủ	✅ /internet/game-thu	✅	✅	OK
+Internet doanh nghiệp	✅ /internet/doanh-nghiep	✅	✅	OK
+WiFi 7 / SpeedX	✅ /dang-ky-nang-cap-wifi7	✅	✅	OK
+Truyền hình FPT Play	✅ /truyen-hinh-fpt-play	✅	✅	OK
+Camera	✅ /camera	✅	✅	OK
+Smart Home	✅ /thiet-bi-thong-minh/smart-home	❌	✅	Bạn hơn đối thủ
+Tin tức	✅ /tin-tuc	✅	✅	OK
+Trang chi tiết từng gói	✅ 85+ trang	✅ 27+ trang	❌ 0 trang	🔴 THIẾU CRITICAL
+Trang địa phương	✅ 10 trang (HCM, HN, HP, ĐN...)	✅ 20+ trang	❌ 0 trang	🔴 THIẾU CRITICAL
+Ngoại hạng Anh	✅ /ngoai-hang-anh + sub-pages	✅ /fpt-ngoai-hang-anh/	❌	🟠 THIẾU
+Chính sách & Điều khoản	✅ /ho-tro/chinh-sach-quy-trinh, /ho-tro/dieu-khoan	✅ 4 trang	❌	🟠 THIẾU
+Giới thiệu chung	✅ /vi/ve-fpt-telecom/gioi-thieu-chung.html	✅	❌	🟡 THIẾU
+Liên hệ	✅ Phòng giao dịch, hotline	✅ /lien-he/	❌	🟡 THIẾU
+FAQ	✅ /ho-tro/cau-hoi-thuong-gap	✅	⚠️ Cần kiểm tra	🟡
+Khuyến mãi	✅ /tin-tuc/khuyen-mai	✅	❌	🟡 THIẾU
+Hướng dẫn sử dụng	✅ /ho-tro/huong-dan-su-dung	❌	❌	🟢
+Dịch vụ F-Safe/UltraFast	✅ /dich-vu-so/...	❌	❌	🟢
+FPT MediCare	✅ /thiet-bi-medicare	❌	❌	🟢
+Access Point	✅ /thiet-bi-thong-minh/access-point	✅	❌	🟢
+🎯 Đề xuất hướng đi: 4 Phase triển khai
+IMPORTANT
+
+Vấn đề lớn nhất: Web bạn là SPA (React + Vite) → Google crawler khó đọc nội dung. fpt.vn dùng SSR (Server-Side Rendering). Tuy nhiên, Google đã hỗ trợ crawl JavaScript khá tốt, nên giải pháp react-helmet-async + sitemap + structured data vẫn khả thi cho SPA.
+
+🔴 Phase 1: SEO Foundation (Ưu tiên NGAY — 1-2 ngày)
+Nền tảng kỹ thuật SEO, không cần thêm trang mới
+
+[NEW] SEO Component với react-helmet-async
+Cài react-helmet-async
+Tạo component <SEOHead> dùng chung cho mọi trang
+Props: title, description, canonicalUrl, ogImage, ogType, keywords
+Tự động inject: OG tags, Twitter Card, canonical URL
+[NEW] Breadcrumb Component
+Component <Breadcrumb> dùng JSON-LD BreadcrumbList schema
+Hiển thị visual breadcrumb + embed structured data
+[NEW] public/robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/*
+Sitemap: https://your-domain.com/sitemap.xml
+[NEW] public/sitemap.xml
+Liệt kê tất cả routes hiện tại
+Cập nhật khi thêm trang mới
+[MODIFY] Mỗi page component thêm <SEOHead>
+Mỗi page (Home, CaNhan, GiaDinh...) có title/description unique
+H1 tag unique chứa keyword chính
+🔴 Phase 2: Content Pages — Trang chi tiết gói cước (3-5 ngày)
+Đây là hạng mục SEO quan trọng nhất — cả fpt.vn (85+ trang) và đối thủ (27+ trang) đều có
+
+[NEW] src/pages/internet/PackageDetail.jsx
+Route: /internet/:packageSlug (ví dụ: /internet/goi-sky, /internet/goi-giga)
+Tái sử dụng logic từ ProductDetailModal hiện tại
+SEO Head unique cho mỗi gói: Đăng ký Internet FPT Gói Sky - Tốc độ 1Gbps | Khuyến mãi 05/2026
+JSON-LD Product schema (name, price, description, offers)
+Breadcrumb: Trang chủ > Internet > Internet Cá nhân > Gói Sky
+CTA đăng ký ngay trên trang
+[MODIFY] src/data/products/*.js
+Thêm field slug cho mỗi gói (ví dụ: slug: 'goi-sky')
+Thêm field seoTitle, seoDescription cho mỗi gói
+[MODIFY] src/App.jsx
+Thêm route: <Route path="/internet/:slug" element={<PackageDetail region={region} />} />
+Số lượng trang tạo được:
+fpt.vn có: 85+ trang gói cước
+Đối thủ có: 27+ trang
+Bạn cần tạo: tối thiểu 20-30 trang (tất cả gói từ data hiện có)
+🟠 Phase 3: Local SEO + Landing Pages (5-7 ngày)
+fpt.vn có 10 trang địa phương, đối thủ có 20+ trang
+
+[NEW] src/pages/local/LocalLanding.jsx
+Route: /lap-internet-wifi-:city (ví dụ: /lap-internet-wifi-hcm)
+Template chung, data khác nhau theo tỉnh/thành
+SEO: Lắp mạng Internet FPT tại TP.HCM - Khuyến mãi tháng 05/2026
+JSON-LD LocalBusiness schema
+Nội dung: giới thiệu khu vực + danh sách gói cước khả dụng + form đăng ký
+Bắt đầu với 10 tỉnh/thành lớn nhất: HCM, Hà Nội, Đà Nẵng, Hải Phòng, Bình Dương, Đồng Nai, Hải Dương, Quảng Ninh, Khánh Hòa, Vũng Tàu (giống fpt.vn)
+[NEW] Landing page Ngoại hạng Anh
+Route: /ngoai-hang-anh
+Keyword trending, cả fpt.vn và đối thủ đều có
+Liệt kê các gói combo thể thao
+SEO: Combo Internet FPT xem Ngoại hạng Anh 2025/26 - Tặng FPT Play Box
+🟡 Phase 4: Trust Pages + Policy (2-3 ngày)
+Chuẩn cho Google Ads và tạo uy tín
+
+[NEW] Các trang bổ sung:
+Trang	Route	SEO Purpose
+Chính sách bảo mật	/chinh-sach-bao-mat	Bắt buộc cho Ads
+Điều khoản sử dụng	/dieu-khoan-su-dung	Bắt buộc cho Ads
+Giới thiệu	/gioi-thieu	Brand trust signal
+Liên hệ	/lien-he	Local SEO boost
+Khuyến mãi	/khuyen-mai	Traffic keyword "khuyến mãi FPT"
+FAQ	/cau-hoi-thuong-gap	Rich snippets
+[NEW] JSON-LD FAQ Schema cho trang FAQ
+Giúp hiển thị FAQ rich snippets trên Google SERP
+📈 Kết quả dự kiến sau triển khai
+Metric	Hiện tại	Sau Phase 1-2	Sau Phase 3-4
+Số trang indexable	~14	~44+	~60+
+Structured Data	0 schema	Product + Breadcrumb	+ LocalBusiness + FAQ
+OG Tags	0%	100%	100%
+Local SEO coverage	0 tỉnh	0 tỉnh	10 tỉnh
+Keyword coverage (gói cước)	0	20-30 keywords	30+ keywords
+User Review Required
+IMPORTANT
+
+Quyết định quan trọng cần bạn xác nhận:
+
+Bạn muốn bắt đầu từ Phase nào? Phase 1 (SEO technical) là nền tảng bắt buộc. Phase 2 (trang gói cước) mang lại SEO impact lớn nhất.
+Domain chính thức của web bạn là gì? Cần để set canonical URL và sitemap.
+Bạn có kế hoạch chuyển sang SSR (Next.js) không? Nếu có, chiến lược sẽ khác. Nếu giữ Vite SPA thì react-helmet-async là đủ.
+Open Questions
+WARNING
+
+SPA vs SSR: Web bạn là Vite SPA, trong khi fpt.vn dùng SSR. Google đã hỗ trợ crawl JS nhưng SSR vẫn tốt hơn cho SEO. Bạn có muốn migrate sang Next.js trong tương lai không? Nếu không, giải pháp react-helmet-async + pre-rendering vẫn khả thi.
+
+Verification Plan
+Automated Tests
+Google Search Console: Submit sitemap, kiểm tra coverage
+Lighthouse SEO audit trên mỗi trang (score target: 90+)
+Rich Results Test: kiểm tra structured data
+npx vite build để đảm bảo build thành công
+Manual Verification
+Google "site:your-domain.com" để kiểm tra index
+Facebook Debugger để kiểm tra OG tags
+Mobile-friendly test

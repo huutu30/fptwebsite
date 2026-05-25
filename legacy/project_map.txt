@@ -1,0 +1,324 @@
+fpt-2026/
+├── public
+│   ├── fonts
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2
+│   │   ├── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2
+│   │   └── UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2
+│   ├── images
+│   │   ├── hardware
+│   │   │   ├── access-point.webp
+│   │   │   ├── dich-vu-fpt-play-vip.jpg
+│   │   │   ├── f-safe.webp
+│   │   │   ├── fpt-play-box.webp
+│   │   │   ├── fpt-play-vvip.webp
+│   │   │   ├── goi-premium.png
+│   │   │   ├── mesh-wifi-7.webp
+│   │   │   ├── modem-wifi-6.webp
+│   │   │   ├── modem-wifi-7.webp
+│   │   │   ├── ngoai-hang-anh.webp
+│   │   │   ├── no-ads-fpt-play.png
+│   │   │   ├── ont-1-port.webp
+│   │   │   ├── thiet-bi-can-bang-tai.webp
+│   │   │   ├── ultra-fast.webp
+│   │   │   └── zplay.webp
+│   │   ├── optimized
+│   │   │   ├── banner_1.webp
+│   │   │   ├── banner_2.webp
+│   │   │   ├── banner_3.webp
+│   │   │   ├── banner_4.webp
+│   │   │   ├── banner_5.webp
+│   │   │   ├── banner_6.webp
+│   │   │   ├── fpt_play_premium.webp
+│   │   │   ├── fpt_promo_banner.webp
+│   │   │   ├── fpt_vvip_1.webp
+│   │   │   └── fpt_vvip_2.webp
+│   │   ├── 1751211910_5_interne_ca131716.webp
+│   │   ├── 1751211940_8_interne_f947980b.webp
+│   │   ├── 1765095073_Combothet_8aa7eb1a.webp
+│   │   ├── 1765335432_GoiVVIP1__5938832e.webp
+│   │   ├── 1765335690_GoiVVIP2__2866d1cd.webp
+│   │   ├── 1768298151_ComboFGam_2f059d99.webp
+│   │   ├── 6915e660eff1b_Intern_66f2d8ad.webp
+│   │   ├── 6915ea35e64f7_Intern_73dcb8a4.webp
+│   │   ├── 6915eebe593b4_FPT_20_a4bd7b48.webp
+│   │   ├── 6915f4726f49c_Intern_c45fea2b.webp
+│   │   ├── 6915f4e925e2a_Intern_cd019b27.webp
+│   │   ├── 6915f89cf1b46_Combo__abd118b4.webp
+│   │   ├── 6915f991627c9_Triple_092b7bf3.webp
+│   │   ├── 6915fa003b6d8_Combo__bc3b2291.webp
+│   │   ├── 691600e3eab15_FPT_20_7777971e.webp
+│   │   ├── 691603cc18e0f_FPT_20_b8504545.webp
+│   │   ├── 691604180325a_FPT_20_3b1abe67.webp
+│   │   ├── 6916045a8840a_FPT_20_c7eca219.webp
+│   │   ├── 691604bea1063_FPT_20_3676b43c.webp
+│   │   ├── 691605061ff7f_FPT_20_25300d43.webp
+│   │   ├── 691605457f541_FPT_20_df5cf8af.webp
+│   │   ├── 6916054858e9c_FPT_20_4c37f7b9.webp
+│   │   ├── 69160585460b9_FPT_20_c9995a5d.webp
+│   │   ├── 69160618d87d9_FPT_20_f95bbd24.webp
+│   │   ├── 69160d28c2d1c_Combo__e61debf1.webp
+│   │   ├── 69160e909d6da_Combo__3e0660a6.webp
+│   │   ├── 69161430208cd_Combo__29846aa7.webp
+│   │   ├── 69161534e6eb7_intern_b1ce733e.webp
+│   │   ├── 691cc7f859200_Giga_2_9292e8e6.webp
+│   │   ├── 691cc82a43cd3_Sky_20_15d3d587.webp
+│   │   ├── 691cc834b5386_Sky_20_aa249dbb.webp
+│   │   ├── 691cc863af553_Sky_20_b6550a03.webp
+│   │   ├── 691e83525af0b_Triple_5a20eec7.webp
+│   │   ├── 691e8a66012a0_FPT_20_2f15b845.webp
+│   │   ├── 6935c95caa7aa_Combo__19414cf3.webp
+│   │   ├── 695c77644f57f_Triple_0aa06e57.webp
+│   │   ├── 695c88546cf65_Triple_7352be09.webp
+│   │   ├── 695cbbbf4a0d9_FPT_20_48ee97ee.webp
+│   │   ├── 695cbbf2ecb01_FPT_20_288236f7.webp
+│   │   ├── 695cbdbd564ca_FPT_20_795f4d54.webp
+│   │   ├── 695cbe00a9c43_FPT_20_c358e405.webp
+│   │   ├── 6965a13f01e24_Combo__60ca5771.webp
+│   │   ├── 6965a510e83c8_Combo__03dc2258.webp
+│   │   ├── 6965a61ca0bcc_Combo__4bdd411c.webp
+│   │   ├── 6965a6c3d8afe_Combo__000e6a8e.webp
+│   │   ├── 6965a77d2fa13_Combo__e889a5a1.webp
+│   │   ├── 6965a8a6396f4_Combo__ca424737.webp
+│   │   ├── 6965aa487faa8_Combo__e2479610.webp
+│   │   ├── 6965aade8765a_Combo__9fc3666e.webp
+│   │   ├── 6965adb503f93_Combo__8d010370.webp
+│   │   ├── 6965ae9ce1519_Combo__c9af6fef.webp
+│   │   ├── 6965aeaba2b7b_Combo__99965ac8.webp
+│   │   ├── 6965af70f0ae4_Combo__dfed2799.webp
+│   │   ├── 6965b00385201_Combo__107101a2.webp
+│   │   ├── 6965b083d3fed_Combo__6df6948f.webp
+│   │   ├── 6965b106215ea_FPT_20_62f6b40f.webp
+│   │   ├── 6965b233f2a9e_FPT_20_7ffbe467.webp
+│   │   ├── 6965b37a2c719_Combo__d49e4f0b.webp
+│   │   ├── 6965b44ae11ac_Combo__ed6828d9.webp
+│   │   ├── 699d7450920d9_Combo__35a60e4b.webp
+│   │   ├── 699d746d8ebee_Combo__7420be38.webp
+│   │   ├── 699d748c36ec5_Combo__393c6490.webp
+│   │   ├── 699d74a4c6f4d_Combo__04029773.webp
+│   │   ├── 699d750155792_Combo__1ac51d18.webp
+│   │   ├── 699d75173caa3_Combo__56845610.webp
+│   │   ├── 699d752e68504_Combo__9277806e.webp
+│   │   ├── 699d754389296_Combo__abf023fd.webp
+│   │   ├── 699d755f5b2a9_Combo__2b610630.webp
+│   │   ├── 699d757738989_Combo__2ecba893.webp
+│   │   ├── 699d758f93a2a_Combo__f25ca66f.webp
+│   │   ├── 699d75a4ccc87_Combo__c1bd5b29.webp
+│   │   ├── 699d75bd13b4b_Combo__ce07ff8b.webp
+│   │   ├── 699d75cf18475_Combo__27ed5f6e.webp
+│   │   ├── 699ec51ddd4b3_Combo__dc6e1a1b.webp
+│   │   ├── 699ec53d9d567_Combo__19d94a0f.webp
+│   │   ├── 699ec54ebb35c_Combo__8e631e8c.webp
+│   │   ├── 699ec5753be29_Intern_799ce45a.webp
+│   │   ├── 699ec5884a259_Intern_fc82dc9b.webp
+│   │   ├── 69ba4a9c3c1ed_1920x7_106b1784_mobile.webp
+│   │   ├── 69ba4a9c3c1ed_1920x7_106b1784.webp
+│   │   ├── 69bcc4ff4ab4a_SkyEye_d8762e84.webp
+│   │   ├── 69bcf0adbc239_SkyEye_d3200efe.webp
+│   │   ├── 69bcf20478f72_SkyEye_65178d0e.webp
+│   │   ├── 69bcf2cc2715e_SkyEye_5e3c2179.webp
+│   │   ├── 69bcf3e82115d_SkyEye_7a224446.webp
+│   │   ├── 69bcf6c904a79_SkyEye_ef4d1c0b.webp
+│   │   ├── 69ccc6c8c484f_Banner_6e642d8a_mobile.webp
+│   │   ├── 69ccc6c8c484f_Banner_6e642d8a.webp
+│   │   ├── 69d47e1e2144f_Camera_15157d9b.webp
+│   │   ├── 69d47e3874820_Combo__559d27ea.webp
+│   │   ├── 69d47e6d5e354_Combo__48f3772f.webp
+│   │   ├── 69d47e7edad9f_Combo__64e2ee3f.webp
+│   │   ├── 69d47e8e83cdc_Combo__6f5a96b5.webp
+│   │   ├── 69d47f711a01f_Camera_3e46a9f3.webp
+│   │   ├── 69d47fca984ec_Camera_b4f4bde7.webp
+│   │   ├── 69d485fad7dd4_Camera_cb3b9e1a.webp
+│   │   ├── 69d5cd9054d18_Combo__22c0d51c.webp
+│   │   ├── 69d5cd9f40d3b_Combo__36adf355.webp
+│   │   ├── 69d5cdab31530_Combo__947015aa.webp
+│   │   ├── 69d5cdb4cdb7e_Combo__4eddf185.webp
+│   │   ├── 69d86efe4c83d_GigaEy_d1b599cc.webp
+│   │   ├── 69d86f27cf644_GigaEy_0224c160.webp
+│   │   ├── 69d86f5f4ffb8_GigaEy_8708a83b.webp
+│   │   ├── 69d86f7e8b81f_GigaEy_afa37315.webp
+│   │   ├── 69d86f9719b39_SkyEye_f460fefa.webp
+│   │   ├── 69d86fb618701_SkyEye_31eeb566.webp
+│   │   ├── 69d870ca9fe85_SkyEye_1a6fcaae.webp
+│   │   ├── 69d8713e7f170_SkyEye_b5aedacb.webp
+│   │   ├── 69d8716905718_GigaEy_dda7d21e.webp
+│   │   ├── 69d8718a43676_GigaEy_208e42eb.webp
+│   │   ├── 69d871cf23654_GigaEy_03d46955.webp
+│   │   ├── 69d871f1c09a1_GigaEy_1338a499.webp
+│   │   ├── 69e041bf8f173_1_1920_953e52bd.webp
+│   │   ├── banner_mobile.webp
+│   │   ├── bct.png
+│   │   ├── Combo_Fgame_jpg_0842f2c0.webp
+│   │   ├── Combo_LUX800_991x800_e1c1c4b1.webp
+│   │   ├── combo-giga-f1.webp
+│   │   ├── F_Game_1Gbps_300Mbps_acbcacb4.webp
+│   │   ├── goi_cuoc_giga_f1_png_22a8c70d.webp
+│   │   ├── Internet_LUX800_jpg_f2525718.webp
+│   │   ├── internet-meta.webp
+│   │   ├── logo-ftel.svg
+│   │   ├── lux-800.webp
+│   │   ├── product_camera_png_88f5e00f.webp
+│   │   ├── product_internet_fam_e857243b.webp
+│   │   ├── product_internet_gam_75a8e8cf.webp
+│   │   ├── product_internet_per_b2dcc811.webp
+│   │   ├── product_tv_entertain_0ded04ec.webp
+│   │   ├── Super_300_Biz_FPT_10_a94ee99e.webp
+│   │   ├── Super_300_Biz_Plus_F_29ed9b4a.webp
+│   │   ├── super-500-biz-plus.webp
+│   │   ├── super-500-biz.webp
+│   │   ├── super-600-biz-plus.webp
+│   │   ├── super-600-biz.webp
+│   │   ├── super-800-biz.webp
+│   │   ├── Super800_Biz_Plus_FP_6ba22628.webp
+│   │   └── thumbnail_80_jpg_7d803649.webp
+│   ├── favicon.svg
+│   ├── google14a325705c9146a4.html
+│   ├── icons.svg
+│   └── robots.txt
+├── scripts
+│   ├── add_slug.js
+│   ├── check_deploy.cjs
+│   ├── check_live.cjs
+│   ├── compare-prices.cjs
+│   ├── crawl_news.js
+│   ├── debug_crawl.js
+│   ├── download_assets.js
+│   ├── extract_json.js
+│   ├── extract-fpt-prices.js
+│   ├── optimize_images.js
+│   ├── parse_article.js
+│   ├── prerender.js
+│   ├── redownload_images.js
+│   ├── resize_images.js
+│   ├── scan-prices.cjs
+│   ├── test_crawl_article.js
+│   └── test_crawl.js
+├── src
+│   ├── assets
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── components
+│   │   ├── about
+│   │   │   ├── AboutSubNav.jsx
+│   │   │   └── BannerSlider.jsx
+│   │   ├── common
+│   │   │   ├── FloatingContact.jsx
+│   │   │   ├── FloatingContact.module.css
+│   │   │   ├── ProductCardSlider.jsx
+│   │   │   ├── ProductDetailModal.jsx
+│   │   │   ├── ProductSlider.jsx
+│   │   │   ├── RegisterModal.jsx
+│   │   │   ├── RegisterModal.module.css
+│   │   │   ├── ScrollToTop.jsx
+│   │   │   ├── SEOHead.jsx
+│   │   │   ├── SupportCTA.jsx
+│   │   │   └── SupportCTA.module.css
+│   │   ├── home
+│   │   │   ├── ComboSportSlider.jsx
+│   │   │   ├── DiscoverySection.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── NewsSection.jsx
+│   │   │   ├── NewsSection.module.css
+│   │   │   ├── ProductCategorySection.jsx
+│   │   │   ├── ProductCategorySection.module.css
+│   │   │   ├── ProductGrid.jsx
+│   │   │   └── Wifi7Section.jsx
+│   │   └── layout
+│   │       ├── Footer.jsx
+│   │       ├── Footer.module.css
+│   │       └── Navbar.jsx
+│   ├── config
+│   │   └── site.js
+│   ├── context
+│   │   ├── ProductDetailContext.jsx
+│   │   └── RegisterContext.jsx
+│   ├── data
+│   │   ├── products
+│   │   │   ├── cameraData.js
+│   │   │   ├── internetData.js
+│   │   │   ├── truyenHinhData.js
+│   │   │   └── wifi7Data.js
+│   │   ├── menuConfig.js
+│   │   ├── newsData.js
+│   │   └── productData.js
+│   ├── pages
+│   │   ├── about
+│   │   │   ├── AboutUs.jsx
+│   │   │   ├── KhachHangDoiTac.jsx
+│   │   │   ├── LienKetThanhVien.jsx
+│   │   │   └── TapDoanFPT.jsx
+│   │   ├── giai-tri
+│   │   │   ├── FptPlay.jsx
+│   │   │   └── FptPlay.module.css
+│   │   ├── home
+│   │   │   ├── DiscoverySection.jsx
+│   │   │   └── Home.jsx
+│   │   ├── internet
+│   │   │   ├── CaNhan.jsx
+│   │   │   ├── CaNhan.module.css
+│   │   │   ├── DoanhNghiep.jsx
+│   │   │   ├── DoanhNghiep.module.css
+│   │   │   ├── GameThu.jsx
+│   │   │   ├── GameThu.module.css
+│   │   │   ├── GiaDinh.jsx
+│   │   │   ├── GiaDinh.module.css
+│   │   │   ├── PackageDetail.jsx
+│   │   │   ├── PackageDetail.module.css
+│   │   │   ├── Wifi7.jsx
+│   │   │   └── Wifi7.module.css
+│   │   ├── local
+│   │   │   ├── LocalLanding.jsx
+│   │   │   └── LocalLanding.module.css
+│   │   ├── news
+│   │   │   ├── ArticlePage.jsx
+│   │   │   ├── ArticlePage.module.css
+│   │   │   ├── NewsPage.jsx
+│   │   │   └── NewsPage.module.css
+│   │   ├── policy
+│   │   │   └── PrivacyPolicy.jsx
+│   │   ├── smart-device
+│   │   │   ├── Camera.jsx
+│   │   │   ├── Camera.module.css
+│   │   │   ├── SmartHome.jsx
+│   │   │   └── SmartHome.module.css
+│   │   └── support
+│   │       ├── Support.jsx
+│   │       └── Support.module.css
+│   ├── App.css
+│   ├── App.jsx
+│   ├── design.md
+│   ├── entry-server.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── skill.md
+├── .gitignore
+├── all_products_data.txt
+├── article.html
+├── article2.html
+├── chuandoan.txt
+├── code_cua_tu.txt
+├── code.txt
+├── edit.txt
+├── eslint.config.js
+├── extract_data.js
+├── HUONG-DAN-BAO-TRI-SEO.txt
+├── index.html
+├── optimize_banners.cjs
+├── package.json
+├── plan.txt
+├── postcss.config.js
+├── README.md
+├── remake.txt
+├── replace_links.cjs
+├── so-sanh-doi-thu.txt
+├── sync.js
+├── thietbidikem.txt
+├── tiendo
+├── tiendo.txt
+├── urls.txt
+├── vercel.json
+└── vite.config.js

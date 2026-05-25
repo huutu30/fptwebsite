@@ -1,0 +1,482 @@
+.wifi7Page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+.heroSection {
+  background: linear-gradient(135deg, #2a4dd0 0%, #4a7cf7 40%, #6ba3f7 70%, #89c4f9 100%);
+  padding: 0;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Woman + devices image on the left */
+.heroImageWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.heroContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  padding: 60px 20px;
+}
+
+.heroContent {
+  flex: 1;
+  color: #fff;
+  max-width: 500px;
+  margin-left: 36%;
+}
+
+.heroTag {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 16px;
+  backdrop-filter: blur(5px);
+  border-left: 4px solid #fff;
+  letter-spacing: 0.5px;
+}
+
+.heroTitle {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitleScript {
+  font-family: 'Dancing Script', 'Pacifico', 'Segoe Script', cursive;
+  font-size: 58px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-bottom: 0;
+  letter-spacing: 0.3px;
+}
+
+/* HERO FORM */
+.heroFormBox {
+  flex: 0 0 380px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.formTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.inputGroup {
+  margin-bottom: 16px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  background: #f8fafc;
+}
+
+.inputField:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #fff;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #f26f21, #ff8c42);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(242, 111, 33, 0.3);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #e05e10, #f26f21);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(242, 111, 33, 0.4);
+}
+
+/* BENEFITS SECTION */
+.benefitsSection {
+  padding: 60px 20px 20px;
+  background: #fff;
+}
+
+.benefitsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: #64748b;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.benefitItem {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.benefitItem:hover {
+  transform: translateY(-5px);
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.benefitIcon {
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.benefitTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.benefitDesc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* TECH SECTION */
+.techSection {
+  padding: 60px 20px;
+  background: #eaf0f6 url('https://hi-static.fpt.vn/sys/hifpt/pnc_pdx/landing-wifi7/tech-bg.png') left center / auto 100% no-repeat;
+  color: #1e293b;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+}
+
+.techContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.techContentRight {
+  width: 55%;
+}
+
+.techHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.techTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.techCard {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.techIconWrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.techIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.techCardContent {
+  width: 100%;
+}
+
+.techCardTitle {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.techCardDesc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.techBtnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.techBtn {
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 40px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.techBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* PACKAGES SECTION */
+.packagesSection {
+  padding: 0 0 60px;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+}
+
+.packagesSection :global(.discovery-section) {
+  padding-top: 10px;
+}
+
+.packagesSection :global(.combo-sport-section) {
+  padding-top: 10px;
+  background: transparent;
+}
+
+/* FAQ SECTION */
+.faqSection {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.faqQuestion {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faqQuestion:hover {
+  color: #3b82f6;
+}
+
+.faqAnswer {
+  padding: 0 0 20px 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+  display: none;
+}
+
+.faqAnswer.open {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .heroImageWrapper {
+    width: 30%;
+    opacity: 0.5;
+    /* Reduce prominence if it overlaps */
+  }
+
+  .heroContent {
+    margin-left: 10%;
+  }
+
+  .heroTitleScript {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 900px) {
+  .techSection {
+    background-position: left center;
+  }
+
+  .techContainer {
+    justify-content: center;
+  }
+
+  .techContentRight {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .heroImageWrapper {
+    display: none;
+  }
+
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .heroContent {
+    margin: 0 auto 10px;
+    max-width: 100%;
+  }
+
+  .heroTitleScript {
+    font-size: 40px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .heroFormBox {
+    flex: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitleScript {
+    font-size: 36px;
+  }
+}
