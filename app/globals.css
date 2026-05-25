@@ -1497,6 +1497,7 @@ body {
   padding-right: 6px;
   /* Đảm bảo vuốt mượt trên thiết bị cảm ứng */
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -1633,12 +1634,15 @@ body {
   }
 
   .combo-features {
+    max-height: 110px;
     overflow-y: auto;
     padding-right: 10px;
     border-right: 3px solid #e2e8f0;
     border-radius: 0;
     position: relative;
     touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
 
   .combo-features::-webkit-scrollbar {
@@ -2777,6 +2781,8 @@ body {
   max-height: 80px;
   min-height: 80px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .fpt-play-card-special .combo-features li {
@@ -2857,6 +2863,8 @@ body {
   max-height: 80px;
   min-height: 80px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .blueButtonVariant .combo-features li {
