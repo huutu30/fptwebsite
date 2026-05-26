@@ -13,6 +13,7 @@ export default function RegisterModal() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (productName) {
@@ -35,14 +36,17 @@ export default function RegisterModal() {
       setName('');
       setPhone('');
       setAddress('');
+      setIsSubmitting(false);
     }
   }, [isOpen]);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const formData = {
+      formType: 'register',
       name,
       phone,
       address,
@@ -50,9 +54,30 @@ export default function RegisterModal() {
       productName: productName || '',
       productId: productId || '',
     };
-    console.log('📋 Form submitted:', formData);
-    alert(`Cảm ơn bạn! Yêu cầu tư vấn đã được gửi thành công.${productId ? `\nMã gói: ${productId}` : ''}`);
-    closeModal();
+    
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        alert(`Cảm ơn bạn! Yêu cầu tư vấn đã được gửi thành công.${productId ? `\nMã gói: ${productId}` : ''}`);
+        closeModal();
+      } else {
+        alert(data.message || 'Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('Không thể kết nối đến server. Vui lòng kiểm tra kết nối mạng.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -135,8 +160,8 @@ export default function RegisterModal() {
               </div>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              GỬI YÊU CẦU <ArrowRight size={18} />
+            <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+              {isSubmitting ? 'ĐANG GỬI...' : 'GỬI YÊU CẦU'} {!isSubmitting && <ArrowRight size={18} />}
             </button>
           </form>
         </div>

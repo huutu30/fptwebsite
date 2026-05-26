@@ -9,6 +9,43 @@ import styles from './Wifi7.module.css';
 export default function Wifi7Client() {
   const [openFaq, setOpenFaq] = useState(null);
   const { region } = useRegion();
+  const [phone, setPhone] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const payload = {
+      formType: 'wifi7',
+      phone: phone,
+      service: 'Đăng ký lắp đặt Wi-Fi 7 (Gói SpeedX)'
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        alert("Đăng ký thành công! Chuyên viên sẽ liên hệ lại ngay.");
+        setPhone('');
+      } else {
+        alert(data.message || 'Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('Không thể kết nối đến server. Vui lòng kiểm tra kết nối mạng.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const toggleFaq = (index) => {
     if (openFaq === index) {
@@ -65,17 +102,20 @@ export default function Wifi7Client() {
               <h2 className={styles.formTitle}>Đăng ký thông tin</h2>
               <p className={styles.formSubtitle}>Quý khách vui lòng nhập số điện thoại để thực hiện đăng ký lắp đặt Wi-Fi 7</p>
             </div>
-            <form onSubmit={(e) => { e.preventDefault(); alert("Đăng ký thành công!"); }}>
+            <form onSubmit={handleSubmit}>
               <div className={styles.inputGroup}>
                 <input 
                   type="text" 
                   placeholder="Nhập số điện thoại/số hợp đồng" 
                   className={styles.inputField}
                   required 
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  disabled={isSubmitting}
                 />
               </div>
-              <button type="submit" className={styles.submitBtn}>
-                Đăng ký
+              <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                {isSubmitting ? 'Đang gửi...' : 'Đăng ký'}
               </button>
             </form>
           </div>

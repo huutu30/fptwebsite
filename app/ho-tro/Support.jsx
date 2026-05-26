@@ -11,10 +11,48 @@ export default function Support() {
     address: '',
     note: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Cảm ơn bạn! Thông tin đã được gửi. Chuyên viên sẽ gọi lại cho bạn ngay lập tức.');
+    setIsSubmitting(true);
+
+    const payload = {
+      formType: 'support',
+      name: formData.fullName,
+      phone: formData.phone,
+      address: formData.address,
+      note: formData.note
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        alert('Cảm ơn bạn! Thông tin đã được gửi. Chuyên viên sẽ gọi lại cho bạn ngay lập tức.');
+        setFormData({
+          fullName: '',
+          phone: '',
+          address: '',
+          note: ''
+        });
+      } else {
+        alert(data.message || 'Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('Không thể kết nối đến server. Vui lòng kiểm tra kết nối mạng.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,6 +110,7 @@ export default function Support() {
                 type="text" 
                 placeholder="Ví dụ: Nguyễn Văn A" 
                 required 
+                value={formData.fullName}
                 onChange={(e) => setFormData({...formData, fullName: e.target.value})}
               />
             </div>
@@ -83,6 +122,7 @@ export default function Support() {
                 type="tel" 
                 placeholder="038x xxx xxx" 
                 required 
+                value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
               />
             </div>
@@ -93,13 +133,18 @@ export default function Support() {
                 className={styles.input} 
                 type="text" 
                 placeholder="Nhập địa chỉ nhà bạn..." 
+                value={formData.address}
                 onChange={(e) => setFormData({...formData, address: e.target.value})}
               />
             </div>
 
             <div className={styles.inputGroup}>
               <label className={styles.label}>Gói dịch vụ quan tâm</label>
-              <select className={styles.input} onChange={(e) => setFormData({...formData, note: e.target.value})}>
+              <select 
+                className={styles.input} 
+                value={formData.note}
+                onChange={(e) => setFormData({...formData, note: e.target.value})}
+              >
                 <option value="">-- Chọn dịch vụ --</option>
                 <option value="Internet">Internet cáp quang</option>
                 <option value="Combo">Combo Internet + Truyền hình</option>
@@ -108,8 +153,8 @@ export default function Support() {
               </select>
             </div>
 
-            <button type="submit" className={styles.btnSubmit}>
-              GỌI LẠI CHO TÔI NGAY <ArrowRight size={20} strokeWidth={3}/>
+            <button type="submit" className={styles.btnSubmit} disabled={isSubmitting}>
+              {isSubmitting ? 'ĐANG GỬI YÊU CẦU...' : 'GỌI LẠI CHO TÔI NGAY'} {!isSubmitting && <ArrowRight size={20} strokeWidth={3}/>}
             </button>
             <p className={styles.formFooter}>
               Cam kết bảo mật 100%. Tôi sẽ gọi lại cho bạn ngay sau khi nhận được yêu cầu.
