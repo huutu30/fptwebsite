@@ -150,11 +150,7 @@ export default function LienKetThanhVien() {
 
       {/* ===== SUBSIDIARIES GRID ===== */}
       <Section bg="#f5f6fa">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-          gap: '24px',
-        }}>
+        <div className="member-grid">
           {subsidiaries.map((item, idx) => (
             <SubsidiaryCard key={idx} item={item} index={idx} />
           ))}
@@ -176,21 +172,9 @@ export default function LienKetThanhVien() {
           }} />
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '24px',
-        }}>
+        <div className="office-grid">
           {offices.map((office, i) => (
-            <div key={i} style={{
-              padding: '30px',
-              borderRadius: '16px',
-              background: 'linear-gradient(135deg, #f8faff 0%, #eef4ff 100%)',
-              border: '1px solid #dbeafe',
-              display: 'flex',
-              gap: '20px',
-              alignItems: 'flex-start',
-            }}>
+            <div key={i} className="office-card">
               <div style={{
                 width: '56px', height: '56px', borderRadius: '14px',
                 background: 'linear-gradient(135deg, #0056D2, #3b82f6)',

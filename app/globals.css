@@ -2898,7 +2898,38 @@ body {
   font-size: 14px !important;
   transition: background-color 0.2s ease !important;
 }
-
 .blueButtonVariant .combo-btn-primary:hover {
   background: #2563eb !important;
+}
+
+/* ==========================================================================
+   PAGE: LIÊN KẾT - THÀNH VIÊN (RESPONSIVE FIXES)
+   ========================================================================== */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 24px;
+}
+
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 24px;
+}
+
+.office-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8faff 0%, #eef4ff 100%);
+  border: 1px solid #dbeafe;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+  .office-card {
+    padding: 20px;
+    gap: 16px;
+  }
 }
