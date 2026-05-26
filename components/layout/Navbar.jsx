@@ -88,8 +88,8 @@ export default function Navbar() {
         document.getElementById('mobile-region-dropdown')?.classList.remove('show');
       }
     };
-    document.addEventListener('mousedown', onClick);
-    return () => document.removeEventListener('mousedown', onClick);
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
   }, []);
 
   useEffect(() => {

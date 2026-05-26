@@ -907,6 +907,12 @@ body {
     margin-right: 12px;
   }
 
+  /* Tránh sự kiện chạm bị ăn mất bởi các icon SVG hoặc text */
+  .hamburger-btn *,
+  .mobile-location-pill * {
+    pointer-events: none;
+  }
+
   /* SEARCH DESKTOP → ẨN */
   .search-desktop {
     display: none;
@@ -2713,12 +2719,14 @@ body {
   align-items: center;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .global-loader.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .global-loader-spinner {
