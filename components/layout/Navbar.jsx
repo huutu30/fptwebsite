@@ -74,22 +74,31 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const onClick = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) setActiveMega(null);
-      // Close region dropdown when clicking outside
-      const regionWrapper = document.getElementById('topbar-region-wrapper');
-      if (regionWrapper && !regionWrapper.contains(e.target)) {
-        document.getElementById('region-dropdown')?.classList.remove('show');
-      }
-      
-      // Close mobile region dropdown when clicking outside
-      const mobileRegionWrapper = document.querySelector('.mobile-region-wrapper');
-      if (mobileRegionWrapper && !mobileRegionWrapper.contains(e.target)) {
-        document.getElementById('mobile-region-dropdown')?.classList.remove('show');
+    const handleOutsideClick = (e) => {
+      try {
+        if (!e || !e.target || !(e.target instanceof Node)) return;
+
+        if (navRef.current && typeof navRef.current.contains === 'function' && !navRef.current.contains(e.target)) {
+          setActiveMega(null);
+        }
+
+        // Close region dropdown when clicking outside
+        const regionWrapper = document.getElementById('topbar-region-wrapper');
+        if (regionWrapper && typeof regionWrapper.contains === 'function' && !regionWrapper.contains(e.target)) {
+          document.getElementById('region-dropdown')?.classList.remove('show');
+        }
+
+        // Close mobile region dropdown when clicking outside
+        const mobileRegionWrapper = document.querySelector('.mobile-region-wrapper');
+        if (mobileRegionWrapper && typeof mobileRegionWrapper.contains === 'function' && !mobileRegionWrapper.contains(e.target)) {
+          document.getElementById('mobile-region-dropdown')?.classList.remove('show');
+        }
+      } catch (err) {
+        console.error('Click outside error:', err);
       }
     };
-    document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
   }, []);
 
   useEffect(() => {
