@@ -323,8 +323,6 @@ body {
   width: 100%;
   z-index: 9999;
   transition: box-shadow 0.3s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 .site-header.scrolled {
@@ -917,7 +915,8 @@ body {
     top: 0;
     left: -100%;
     width: 65%;
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
     background: #fff;
     transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     flex-direction: column;
