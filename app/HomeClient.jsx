@@ -10,6 +10,7 @@ import ProductCategorySection from "@/components/home/ProductCategorySection";
 import NewsSection from "@/components/home/NewsSection";
 import { useRegion } from "@/context/RegionContext";
 import { usePathname } from "next/navigation";
+import TechDevicesSection from "@/components/home/TechDevicesSection";
 
 export default function HomeClient() {
   const { region, activeCity } = useRegion();
@@ -108,11 +109,7 @@ export default function HomeClient() {
         />
 
         {/* SECTION 3: THIẾT BỊ CÔNG NGHỆ */}
-        <ProductCardSlider
-          title="Thiết bị công nghệ bán chạy nhất"
-          data={PRODUCT_DATA.camera_combos}
-          customCardClass="camera-card-special"
-        />
+        <TechDevicesSection />
 
         {/* SECTION 4: FPT PLAY - GÓI XEM TRUYỀN HÌNH */}
         <ProductCardSlider

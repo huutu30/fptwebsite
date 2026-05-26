@@ -407,7 +407,7 @@ export const truyenHinhData = {
       name: "Banner Khuyến Mãi",
       isBanner: true,
       image: "https://hi-static.fpt.vn/sys/shop/prod/2026-05-25/6a13a7334c042_Banner%20d%E1%BB%8Dc%20-%20318x421%20%281%29.jpg",
-      link: "/dang-ky",
+      link: "/giai-tri/fpt-play",
     },
     {
       id: "vvip1",

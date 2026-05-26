@@ -863,10 +863,12 @@
     gap: 16px;
     padding: 0 16px;
   }
+
   .promoCard {
     padding: 28px 20px;
   }
+
   .promoImgWrap {
     height: 150px;
   }
-}
+}

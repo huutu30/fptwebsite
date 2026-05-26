@@ -88,7 +88,7 @@ export default function ProductCardSlider({ title, subtitle, data, badgeSub, cus
   if (!data || data.length === 0) return null;
 
   return (
-    <section className="combo-sport-section" aria-label={title}>
+    <section className={`combo-sport-section ${customCardClass ? `section-${customCardClass}` : ''}`.trim()} aria-label={title}>
       {/* HEADER */}
       <div className="combo-sport-header">
         <div className="combo-sport-title-group">
