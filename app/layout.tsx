@@ -38,6 +38,44 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.onerror = function(message, source, lineno, colno, error) {
+                var div = document.createElement('div');
+                div.style.position = 'fixed';
+                div.style.bottom = '80px';
+                div.style.left = '10px';
+                div.style.right = '10px';
+                div.style.background = 'rgba(255, 0, 0, 0.95)';
+                div.style.color = '#fff';
+                div.style.padding = '10px';
+                div.style.zIndex = '999999';
+                div.style.fontSize = '12px';
+                div.style.borderRadius = '5px';
+                div.style.wordBreak = 'break-all';
+                div.innerHTML = '<strong>Error:</strong> ' + message + ' at ' + source + ':' + lineno;
+                document.body.appendChild(div);
+              };
+              window.onunhandledrejection = function(event) {
+                var div = document.createElement('div');
+                div.style.position = 'fixed';
+                div.style.bottom = '80px';
+                div.style.left = '10px';
+                div.style.right = '10px';
+                div.style.background = 'rgba(255, 165, 0, 0.95)';
+                div.style.color = '#000';
+                div.style.padding = '10px';
+                div.style.zIndex = '999999';
+                div.style.fontSize = '12px';
+                div.style.borderRadius = '5px';
+                div.style.wordBreak = 'break-all';
+                div.innerHTML = '<strong>Promise Reject:</strong> ' + event.reason;
+                document.body.appendChild(div);
+              };
+            `
+          }}
+        />
         <RegionProvider>
           <RegisterProvider>
             <ProductDetailProvider>
