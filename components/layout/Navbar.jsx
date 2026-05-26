@@ -206,6 +206,11 @@ export default function Navbar() {
         <nav className="site-navbar" role="navigation" aria-label="Menu chính" itemScope itemType="https://schema.org/SiteNavigationElement">
           <div className="container navbar-inner">
 
+            {/* HAMBURGER */}
+            <button className="hamburger-btn" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? 'Đóng menu' : 'Mở menu'} aria-expanded={mobileOpen} aria-controls="main-nav-menu" id="btn-hamburger">
+              <Menu size={24} aria-hidden="true" />
+            </button>
+
             {/* LOGO */}
             <Link href="/trang-chu" className="site-logo" aria-label="Trang chủ FPT Telecom" title="Về trang chủ" id="site-logo" itemProp="url" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
               <img 
@@ -219,13 +224,8 @@ export default function Navbar() {
               <span className="sr-only">FPT Telecom - Trang chủ</span>
             </Link>
 
-            {/* HAMBURGER */}
-            <button className="hamburger-btn" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? 'Đóng menu' : 'Mở menu'} aria-expanded={mobileOpen} aria-controls="main-nav-menu" id="btn-hamburger">
-              <Menu size={24} aria-hidden="true" />
-            </button>
-
             {/* MOBILE LOCATION PILL */}
-            <div className="mobile-region-wrapper" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <div className="mobile-region-wrapper" style={{ position: 'relative', display: 'flex', alignItems: 'center', zIndex: 50 }}>
               <button
                 className="mobile-location-pill"
                 onClick={() => {
