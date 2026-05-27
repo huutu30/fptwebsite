@@ -3,7 +3,7 @@ import { PRODUCT_DATA } from '@/data/productData';
 import { NEWS_DATA } from '@/data/newsData';
 import { CITY_DATA } from '@/data/cityData';
 
-const BASE_URL = 'https://fptlapmang.id.vn';
+const BASE_URL = 'https://fptwifitocdo.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Static paths

@@ -3,11 +3,11 @@ import KhachHangDoiTac from "./KhachHangDoiTac";
 export const metadata = {
   title: "Khách hàng - Đối tác - FPT Telecom",
   description: "Đại lý và các đối tác chiến lược hàng đầu của FPT Telecom.",
-  alternates: { canonical: "https://fptlapmang.id.vn/khach-hang-doi-tac" },
+  alternates: { canonical: "https://fptwifitocdo.com/khach-hang-doi-tac" },
   openGraph: {
     title: "Khách hàng - Đối tác - FPT Telecom",
     description: "Đại lý và các đối tác chiến lược hàng đầu của FPT Telecom.",
-    url: "https://fptlapmang.id.vn/khach-hang-doi-tac",
+    url: "https://fptwifitocdo.com/khach-hang-doi-tac",
     siteName: "FPT Telecom", locale: "vi_VN", type: "website",
   },
 };

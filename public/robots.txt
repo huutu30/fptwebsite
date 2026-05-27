@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fptlapmang.id.vn/sitemap.xml
+Sitemap: https://fptwifitocdo.com/sitemap.xml

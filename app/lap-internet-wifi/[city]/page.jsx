@@ -14,13 +14,13 @@ export async function generateMetadata({ params }) {
   return {
     title: `Lắp mạng Internet FPT tại ${cityData.name} - Khuyến mãi tháng ${currentMonth}`,
     description: `Đăng ký lắp đặt Internet FPT tại ${cityData.name}. Cáp quang tốc độ cao, Wi-Fi 6, Wi-Fi 7 lắp đặt trong 24h. Giá chỉ từ 195.000đ/tháng. Gọi ngay 0387498332!`,
-    alternates: { canonical: `https://fptlapmang.id.vn/lap-internet-wifi/${city}` },
+    alternates: { canonical: `https://fptwifitocdo.com/lap-internet-wifi/${city}` },
     openGraph: {
       title: `Lắp mạng Internet FPT tại ${cityData.name} - Khuyến mãi tháng ${currentMonth}`,
       description: `Đăng ký lắp đặt Internet FPT tại ${cityData.name}. Cáp quang tốc độ cao, Wi-Fi 6, Wi-Fi 7 lắp đặt trong 24h.`,
-      url: `https://fptlapmang.id.vn/lap-internet-wifi/${city}`,
+      url: `https://fptwifitocdo.com/lap-internet-wifi/${city}`,
       siteName: "FPT Telecom", locale: "vi_VN", type: "website",
-      images: [{ url: "https://fptlapmang.id.vn/images/69e041bf8f173_1_1920_953e52bd.webp" }],
+      images: [{ url: "https://fptwifitocdo.com/images/69e041bf8f173_1_1920_953e52bd.webp" }],
     },
   };
 }

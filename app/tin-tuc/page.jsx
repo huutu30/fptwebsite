@@ -6,13 +6,13 @@ import styles from './NewsPage.module.css';
 export const metadata = {
   title: "Tin tức Công nghệ, Giải trí, Thể thao | FPT Telecom",
   description: "Cập nhật tin tức mới nhất về công nghệ, giải trí, thể thao, game và khuyến mãi từ FPT Telecom.",
-  alternates: { canonical: "https://fptlapmang.id.vn/tin-tuc" },
+  alternates: { canonical: "https://fptwifitocdo.com/tin-tuc" },
   openGraph: {
     title: "Tin tức Công nghệ, Giải trí, Thể thao | FPT Telecom",
     description: "Cập nhật tin tức mới nhất về công nghệ, giải trí, thể thao, game và khuyến mãi từ FPT Telecom.",
-    url: "https://fptlapmang.id.vn/tin-tuc",
+    url: "https://fptwifitocdo.com/tin-tuc",
     siteName: "FPT Telecom", locale: "vi_VN", type: "website",
-    images: [{ url: "https://fptlapmang.id.vn/images/69e041bf8f173_1_1920_953e52bd.webp" }],
+    images: [{ url: "https://fptwifitocdo.com/images/69e041bf8f173_1_1920_953e52bd.webp" }],
   },
 };
 
